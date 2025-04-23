@@ -8,15 +8,49 @@
     content="Full Stack Developer with 8+ years of experience in Angular, Node.js, TypeScript, and cloud technologies">
   <meta name="keywords"
     content="Full Stack Developer, Senior Software Engineer, Angular, React, NodeJS, TypeScript, Frontend Development, Backend Development, JavaScript, API Development, Microservices, Cloud Architecture">
+  <meta name="linkedin" content="https://linkedin.com/in/shubhamshrivastav">
+  <meta name="github" content="https://github.com/shubham-shrivastava">
+  <meta name="personal-website" content="https://shubham-shrivastava.github.io">
+  <meta name="email" content="shrivastava.shubham219@live.com">
+  <meta name="phone" content="+918236028730">
+  <meta name="location" content="Lalitpur, India">
   <title>Shubham Shrivastav - Full Stack Developer</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" media="screen">
   <link rel="stylesheet" href="styles.css" media="print">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    .ats-section {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      visibility: hidden;
+    }
+    @media print {
+      .ats-section {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- ATS-friendly hidden section with plaintext contact info -->
+  <div class="ats-section" aria-hidden="true">
+    <p>Shubham Shrivastav</p>
+    <p>Full Stack Developer</p>
+    <p>Email: shrivastava.shubham219@live.com</p>
+    <p>Phone: +91 8236028730</p>
+    <p>Location: Lalitpur, India</p>
+    <p>Website: https://shubham-shrivastava.github.io</p>
+    <p>LinkedIn: https://linkedin.com/in/shubhamshrivastav</p>
+    <p>GitHub: https://github.com/shubham-shrivastava</p>
+  </div>
+
   <div class="container">
     <div class="card">
       <div class="resume">
@@ -33,27 +67,27 @@
           </div>
 
           <!-- Contact Section -->
-          <div class="sidebar-section">
+          <div class="sidebar-section" itemscope itemtype="http://schema.org/Person">
             <div class="sidebar-section-header">
               <i class="fas fa-address-card"></i>
               <span>CONTACT</span>
             </div>
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <span><a href="mailto:shrivastava.shubham219@live.com"
+              <span><a href="mailto:shrivastava.shubham219@live.com" itemprop="email"
                   target="_blank">shrivastava.shubham219@live.com</a></span>
             </div>
             <div class="contact-item">
               <i class="fas fa-phone"></i>
-              <span><a href="tel:+918236028730" target="_blank">+91 8236028730</a></span>
+              <span><a href="tel:+918236028730" itemprop="telephone" target="_blank">+91 8236028730</a></span>
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>Lalitpur, India</span>
+              <span itemprop="address">Lalitpur, India</span>
             </div>
             <div class="contact-item">
               <i class="fas fa-globe"></i>
-              <span><a href="https://shubham-shrivastava.github.io" target="_blank">shubham-shrivastava.github.io</a></span>
+              <span><a href="https://shubham-shrivastava.github.io" itemprop="url" target="_blank">shubham-shrivastava.github.io</a></span>
             </div>
           </div>
 
@@ -121,19 +155,20 @@
           </div>
 
           <!-- Social Section -->
-          <div class="sidebar-section social-section">
+          <div class="sidebar-section social-section" itemscope itemtype="http://schema.org/Person">
             <div class="sidebar-section-header">
               <i class="fas fa-share-alt"></i>
               <span>SOCIAL</span>
             </div>
             <div class="contact-item">
               <i class="fab fa-linkedin"></i>
-              <span><a href="https://linkedin.com/in/shubhamshrivastav"
-                  target="_blank">linkedin.com/in/shubhamshrivastav</a></span>
+              <span><a href="https://linkedin.com/in/shubhamshrivastav" itemprop="sameAs" rel="me nofollow" 
+                  class="linkedin-profile" data-source="linkedin" target="_blank">linkedin.com/in/shubhamshrivastav</a></span>
             </div>
             <div class="contact-item">
               <i class="fab fa-github"></i>
-              <span><a href="https://github.com/shubham-shrivastava" target="_blank">github.com/shubham-shrivastava</a></span>
+              <span><a href="https://github.com/shubham-shrivastava" itemprop="sameAs" rel="me nofollow"
+                  class="github-profile" data-source="github" target="_blank">github.com/shubham-shrivastava</a></span>
             </div>
           </div>
           <!-- Education Section -->
@@ -184,7 +219,7 @@
                 <div class="job-location">Remote</div>
               </div>
               <div class="tech-environment">
-                <strong>Technical Environment:</strong> Angular 18, TypeScript, NgRx, Node.js, Express, REST APIs, NX
+                <strong>Technologies:</strong> Angular 18, TypeScript, NgRx, Node.js, Express, REST APIs, NX
                 Monorepo, Jest, Git, CI/CD, AWS
               </div>
               <ul class="job-description">
@@ -205,7 +240,7 @@
                 <div class="job-location">Remote</div>
               </div>
               <div class="tech-environment">
-                <strong>Technical Environment:</strong> Node.js, Express, MongoDB, REST APIs, Microservices, Docker, GitHub
+                <strong>Technologies:</strong> Node.js, Express, MongoDB, REST APIs, Microservices, Docker, GitHub
                 Actions, AWS Lambda
               </div>
               <ul class="job-description">
@@ -224,7 +259,7 @@
                 <div class="job-location">Nagpur, India</div>
               </div>
               <div class="tech-environment">
-                <strong>Technical Environment:</strong> Python, Django, OCR, Tesseract, Java, Windows/.NET
+                <strong>Technologies:</strong> Python, Django, OCR, Tesseract, Java, Windows/.NET
               </div>
               <ul class="job-description">
                 <li>Delivered <span class="highlight">mission-critical</span> and <span class="highlight">highly secure</span> applications for <span class="highlight">government</span>, achieving security standards and regulatory requirements.</li>
@@ -261,6 +296,37 @@
       </div>
     </div>
   </div>
+  
+  <script>
+    // Script to ensure contact information is properly displayed in PDF exports
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add a class to indicate the document is ready for printing
+      document.body.classList.add('pdf-ready');
+      
+      // Ensure ATS-friendly metadata is included in the text layer of the PDF
+      const addAtsMetadata = function() {
+        // Create hidden text elements with machine-readable information
+        const links = document.querySelectorAll('.linkedin-profile, .github-profile');
+        links.forEach(link => {
+          // Add text content directly in the document that's readable by ATS
+          const url = link.getAttribute('href');
+          const source = link.dataset.source || '';
+          const textNode = document.createTextNode(source.toUpperCase() + ': ' + url + ' ');
+          
+          // Ensure this text is part of the document for ATS parsing
+          const span = document.createElement('span');
+          span.style.position = 'absolute';
+          span.style.left = '-9999px';
+          span.style.fontSize = '0';
+          span.appendChild(textNode);
+          document.body.appendChild(span);
+        });
+      };
+      
+      // Run the function
+      addAtsMetadata();
+    });
+  </script>
 </body>
 
 </html>
