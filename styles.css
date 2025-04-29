@@ -484,14 +484,15 @@ ul.job-description li:before, ul.project-description li:before {
   .sidebar {
     height: 210vh;
   }
-  .section.projects-section {
+
+  .section.experience-section > .job:last-child {
     padding-top: 19px;
     page-break-before: always;
     break-before: page;
   }
   
   /* Force education section to start on the second page */
-  .sidebar-section.education-section {
+  .sidebar-section.social-section {
     page-break-before: always;
     break-before: page;
     padding-top: 20px; /* Add some space at the top of the section */
