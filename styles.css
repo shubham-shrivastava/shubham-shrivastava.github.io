@@ -30,7 +30,7 @@ body {
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  height: 90vh;
+  height: auto; /* Changed from 90vh to auto to prevent cutoff */
   padding: 40px 20px;
   position: relative;
   font-size: 13px;
@@ -505,5 +505,68 @@ ul.job-description li:before, ul.project-description li:before {
 
   .contact-item i {
     margin-top: -2px;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+    height: auto;
+    min-height: auto;
+    display: block;
+  }
+
+  .resume {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .main-content {
+    padding: 20px 15px;
+  }
+
+  .job-header, .education-header {
+    flex-direction: column;
+  }
+
+  .job-location, .education-location {
+    text-align: left;
+    margin-top: 5px;
+  }
+}
+
+/* Small screens (mobile) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px 5px;
+  }
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .profile-photo {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  #profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sidebar-name {
+    font-size: 18px;
+  }
+
+  .sidebar-title {
+    font-size: 14px;
   }
 }
