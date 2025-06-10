@@ -118,7 +118,7 @@
                 <h2>Skills & Experience</h2>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="skills-experience-content">
                 <!-- Skills Column -->
                 <div class="skills-column">
@@ -163,7 +163,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Experience Column -->
                 <div class="experience-column">
                     <div class="column-header">
@@ -191,7 +191,7 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
@@ -211,7 +211,7 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
@@ -246,8 +246,12 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" data-gallery="autoresearch">
                         <img src="assets/autoresearch1.png" alt="AutoResearch App">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Gallery (7 images)</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>AutoResearch - Research Expert (Android app)</h3>
@@ -271,10 +275,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" data-gallery="smsify">
                         <img src="assets/smsify1.png" alt="Smsify Project">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Gallery (5 images)</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Smsify - Free SMS Service</h3>
@@ -295,10 +303,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" data-gallery="tastysearch">
                         <img src="assets/tastysearch.png" alt="Review Search Tool">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Image</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Search Tool for Reviews</h3>
@@ -319,10 +331,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" data-gallery="linkedinbot">
                         <img src="assets/linkedinbot.png" alt="LinkedIn Bot">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Image</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>LinkedIn Bot</h3>
@@ -343,10 +359,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" data-gallery="soilmoisture">
                         <img src="assets/soilmoisture.jpg" alt="Soil Moisture Sensor">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Image</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Wireless Soil Moisture Sensor</h3>
@@ -367,10 +387,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" data-gallery="aqms">
                         <img src="assets/aqms.jpeg" alt="Air Quality Monitoring System">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Image</span>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Air Quality Monitoring System</h3>
@@ -462,7 +486,34 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-overlay">
+        <div class="lightbox-container">
+            <button class="lightbox-close" aria-label="Close gallery">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <div class="lightbox-image-container">
+                    <img id="lightbox-image" src="" alt="">
+                    <button class="lightbox-btn lightbox-prev" aria-label="Previous image">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-btn lightbox-next" aria-label="Next image">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="lightbox-info">
+                    <h3 id="lightbox-title"></h3>
+                    <div class="lightbox-counter">
+                        <span id="lightbox-current">1</span> / <span id="lightbox-total">1</span>
+                    </div>
+                </div>
+                <div class="lightbox-dots" id="lightbox-dots"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="portfolio.js"></script>
 </body>
-</html> 
+</html>
