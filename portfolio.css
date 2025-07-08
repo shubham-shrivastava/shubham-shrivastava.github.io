@@ -750,6 +750,36 @@ img {
     transform: translateX(5px);
 }
 
+/* Show More Button */
+.show-more-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.show-more-btn:hover {
+    color: var(--primary-hover);
+}
+
+.show-more-btn i {
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.project-description-expandable {
+    margin-top: 0.5rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
 /* Contact Section */
 .contact {
     background-color: var(--bg-color);

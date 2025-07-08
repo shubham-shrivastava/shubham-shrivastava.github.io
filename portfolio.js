@@ -194,6 +194,20 @@ function openMailClient() {
 class LightboxGallery {
     constructor() {
         this.galleries = {
+            nexdocs: {
+                title: 'Nexdocs - AI-Powered Knowledge Platform',
+                type: 'web', // Web application screenshots
+                images: [
+                    { src: 'assets/nexdocs1.png', alt: 'Nexdocs - Landing Page' },
+                    { src: 'assets/nexdocs2.png', alt: 'Nexdocs - Dashboard Overview' },
+                    { src: 'assets/nexdocs3.png', alt: 'Nexdocs - Knowledge Base Management' },
+                    { src: 'assets/nexdocs4.png', alt: 'Nexdocs - Rich Text Editor' },
+                    { src: 'assets/nexdocs5.png', alt: 'Nexdocs - AI Content Generation' },
+                    { src: 'assets/nexdocs6.png', alt: 'Nexdocs - Analytics Dashboard' },
+                    { src: 'assets/nexdocs7.png', alt: 'Nexdocs - Public Knowledge Base' },
+                    { src: 'assets/nexdocs8.png', alt: 'Nexdocs - Settings & Configuration' }
+                ]
+            },
             autoresearch: {
                 title: 'AutoResearch - Research Expert',
                 type: 'mobile', // Mobile app screenshots
@@ -399,3 +413,21 @@ class LightboxGallery {
 document.addEventListener('DOMContentLoaded', () => {
     new LightboxGallery();
 });
+
+// Toggle project description function
+function toggleProjectDescription(button) {
+    const projectCard = button.closest('.project-card');
+    const expandableElements = projectCard.querySelectorAll('.project-description-expandable');
+    const showMoreText = button.querySelector('.show-more-text');
+    const chevronIcon = button.querySelector('i');
+    
+    const isExpanded = expandableElements[0].style.display !== 'none';
+    
+    expandableElements.forEach(element => {
+        element.style.display = isExpanded ? 'none' : 'block';
+    });
+    
+    showMoreText.textContent = isExpanded ? 'Show More' : 'Show Less';
+    chevronIcon.classList.toggle('fa-chevron-down', isExpanded);
+    chevronIcon.classList.toggle('fa-chevron-up', !isExpanded);
+}
