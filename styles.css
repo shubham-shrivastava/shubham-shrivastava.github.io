@@ -487,8 +487,6 @@ ul.job-description li:before, ul.project-description li:before {
 
   .section.experience-section > .job:last-child {
     padding-top: 19px;
-    page-break-before: always;
-    break-before: page;
   }
   
   /* Force education section to start on the second page */
@@ -498,12 +496,17 @@ ul.job-description li:before, ul.project-description li:before {
     padding-top: 20px; /* Add some space at the top of the section */
   }
   
-  /* Set page size and margins */
+  /* Page setup & footer page numbers */
   @page {
     size: A4;
     margin: 0;
   }
 
+  /* Utility class (if needed in HTML) */
+  .padding-top {
+    padding-top: 20px;
+  }
+   
   .contact-item i {
     margin-top: -2px;
   }
