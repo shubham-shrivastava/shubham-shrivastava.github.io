@@ -198,14 +198,15 @@ class LightboxGallery {
                 title: 'Nexdocs - AI-Powered Knowledge Platform',
                 type: 'web', // Web application screenshots
                 images: [
-                    { src: 'assets/nexdocs1.png', alt: 'Nexdocs - Landing Page' },
-                    { src: 'assets/nexdocs2.png', alt: 'Nexdocs - Dashboard Overview' },
-                    { src: 'assets/nexdocs3.png', alt: 'Nexdocs - Knowledge Base Management' },
-                    { src: 'assets/nexdocs4.png', alt: 'Nexdocs - Rich Text Editor' },
-                    { src: 'assets/nexdocs5.png', alt: 'Nexdocs - AI Content Generation' },
-                    { src: 'assets/nexdocs6.png', alt: 'Nexdocs - Analytics Dashboard' },
-                    { src: 'assets/nexdocs7.png', alt: 'Nexdocs - Public Knowledge Base' },
-                    { src: 'assets/nexdocs8.png', alt: 'Nexdocs - Settings & Configuration' }
+                    { src: 'assets/nexdocs1.png', alt: 'Nexdocs - Create Knowledge Base Configuration' },
+                    { src: 'assets/nexdocs2.png', alt: 'Nexdocs - Document Processing Progress' },
+                    { src: 'assets/nexdocs3.png', alt: 'Nexdocs - Processing Complete Summary' },
+                    { src: 'assets/nexdocs4.png', alt: 'Nexdocs - Knowledge Base Generation Dashboard' },
+                    { src: 'assets/nexdocs5.png', alt: 'Nexdocs - Knowledge Base Overview with Sections' },
+                    { src: 'assets/nexdocs6.png', alt: 'Nexdocs - Rich Text Article Editor' },
+                    { src: 'assets/nexdocs7.png', alt: 'Nexdocs - Theme Customization Settings' },
+                    { src: 'assets/nexdocs8.png', alt: 'Nexdocs - Publishing & Access Controls' },
+                    { src: 'assets/nexdocs9.png', alt: 'Nexdocs - Public Knowledge Base Article View' }
                 ]
             },
             autoresearch: {

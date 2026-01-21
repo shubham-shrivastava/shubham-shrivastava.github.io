@@ -488,14 +488,12 @@ ul.job-description li:before, ul.project-description li:before {
   .section.experience-section > .job:last-child {
     padding-top: 19px;
   }
-  
-  /* Force education section to start on the second page */
-  .sidebar-section.social-section {
-    page-break-before: always;
-    break-before: page;
-    padding-top: 20px; /* Add some space at the top of the section */
+
+  .skills-category:last-child {
+    padding-top: 20px;
   }
   
+
   /* Page setup & footer page numbers */
   @page {
     size: A4;
