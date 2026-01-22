@@ -486,11 +486,13 @@ ul.job-description li:before, ul.project-description li:before {
   }
 
   .section.experience-section > .job:last-child {
+    page-break-before: always;
     padding-top: 19px;
   }
 
-  .skills-category:last-child {
-    padding-top: 20px;
+  .skills-category:nth-child(4) {
+    page-break-before: always;
+    padding-top: 19px;
   }
   
 
