@@ -209,6 +209,16 @@ class LightboxGallery {
                     { src: 'assets/nexdocs9.png', alt: 'Nexdocs - Public Knowledge Base Article View' }
                 ]
             },
+            railway: {
+                title: 'Railway Control Center - Service Scheduler',
+                type: 'web', // Web application screenshots
+                images: [
+                    { src: 'assets/railway1.png', alt: 'Railway Control Center - Dashboard' },
+                    { src: 'assets/railway2.png', alt: 'Railway Control Center - Services' },
+                    { src: 'assets/railway3.png', alt: 'Railway Control Center - Schedules' },
+                    { src: 'assets/railway4.png', alt: 'Railway Control Center - Health Dashboard' }
+                ]
+            },
             autoresearch: {
                 title: 'AutoResearch - Research Expert',
                 type: 'mobile', // Mobile app screenshots
