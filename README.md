@@ -38,7 +38,7 @@ I'm a **Senior Full Stack Developer** with **9+ years of experience** building h
 
 <div align="center">
 
-[![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/shubham-shrivastava?cardType=level&theme=nightowl&preferLogin=false)](https://git.io/awesome-stats-card)
+[![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/shubham-shrivastava?cardType=github&theme=nightowl&preferLogin=false)](https://shubham-shrivastava.github.io)
 
 </div>
 
