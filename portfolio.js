@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('reveal-ready');
     // Check for saved theme preference or use device preference
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const savedTheme = localStorage.getItem('theme');
@@ -139,6 +140,52 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    // Scroll reveal animations
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealItems = document.querySelectorAll('[data-reveal]');
+    const staggerContainers = document.querySelectorAll('[data-stagger]');
+
+    if (prefersReducedMotion) {
+        revealItems.forEach(item => item.classList.add('is-visible'));
+        staggerContainers.forEach(container => container.classList.add('is-visible'));
+    } else {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -10% 0px'
+        });
+
+        const isInView = (element) => {
+            const rect = element.getBoundingClientRect();
+            return rect.top < window.innerHeight * 0.9;
+        };
+
+        revealItems.forEach(item => {
+            if (isInView(item)) {
+                item.classList.add('is-visible');
+            } else {
+                revealObserver.observe(item);
+            }
+        });
+        staggerContainers.forEach(container => {
+            const items = container.querySelectorAll('[data-stagger-item]');
+            items.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 80}ms`;
+            });
+            if (isInView(container)) {
+                container.classList.add('is-visible');
+            } else {
+                revealObserver.observe(container);
+            }
+        });
+    }
 });
 
 // Function to open email client with form data
@@ -217,6 +264,16 @@ class LightboxGallery {
                     { src: 'assets/railway2.png', alt: 'Railway Control Center - Services' },
                     { src: 'assets/railway3.png', alt: 'Railway Control Center - Schedules' },
                     { src: 'assets/railway4.png', alt: 'Railway Control Center - Health Dashboard' }
+                ]
+            },
+            timedial: {
+                title: 'TimeDial - Timezone Menu Bar App',
+                type: 'web', // macOS app screenshots
+                images: [
+                    { src: 'assets/timedial1.png', alt: 'TimeDial - Menu bar app interface' },
+                    { src: 'assets/timedial2.png', alt: 'TimeDial - Multi-timezone clocks' },
+                    { src: 'assets/timedial3.png', alt: 'TimeDial - Timezone search and controls' },
+                    { src: 'assets/timedialdemo.gif', alt: 'TimeDial - Demo animation' }
                 ]
             },
             autoresearch: {

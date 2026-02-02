@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -26,21 +26,21 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="theme-switch">
+            <button class="theme-switch" type="button" aria-label="Toggle color theme">
                 <i class="fas fa-moon"></i>
-            </div>
-            <div class="hamburger">
+            </button>
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content" data-reveal>
                 <h1>Hi, I'm <span class="highlight">Shubham Shrivastav</span></h1>
                 <h2>Full Stack Developer</h2>
                 <p>I build exceptional digital experiences with modern technologies.</p>
@@ -53,7 +53,7 @@
                     <a href="https://github.com/shubham-shrivastava" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image" data-reveal>
                 <img src="profile.png" alt="Shubham Shrivastav">
             </div>
         </div>
@@ -62,12 +62,12 @@
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2>About Me</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="about-content">
-                <div class="about-info">
+                <div class="about-info" data-reveal>
                     <p>
                         Senior Full Stack Developer with 9+ years of experience building scalable backend systems, AI-powered applications, and modern web architectures. Deep expertise in Node.js, Python, and TypeScript for backend services, with proven ability to architect microservices, REST APIs, and sophisticated data processing pipelines supporting millions of users.
                     </p>
@@ -95,7 +95,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="core-competencies">
+                <div class="core-competencies" data-reveal>
                     <h3>Core Competencies</h3>
                     <ul>
                         <li>Backend Systems Architecture</li>
@@ -115,7 +115,7 @@
     <!-- Skills and Experience Section -->
     <section id="skills-experience" class="skills-experience section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2>Skills & Experience</h2>
                 <div class="section-divider"></div>
             </div>
@@ -126,8 +126,8 @@
                     <div class="column-header">
                         <h3>Technical Skills</h3>
                     </div>
-                    <div class="skills-content">
-                        <div class="skill-category">
+                    <div class="skills-content" data-stagger>
+                        <div class="skill-category" data-stagger-item>
                             <h3>Backend & Infrastructure</h3>
                             <div class="skill-tags">
                                 <span class="skill-tag">Node.js 16+</span>
@@ -144,7 +144,7 @@
                                 <span class="skill-tag">Docker</span>
                             </div>
                         </div>
-                        <div class="skill-category">
+                        <div class="skill-category" data-stagger-item>
                             <h3>AI & Machine Learning</h3>
                             <div class="skill-tags">
                                 <span class="skill-tag">OpenAI GPT-4</span>
@@ -155,7 +155,7 @@
                                 <span class="skill-tag">AI Observability</span>
                             </div>
                         </div>
-                        <div class="skill-category">
+                        <div class="skill-category" data-stagger-item>
                             <h3>Frontend</h3>
                             <div class="skill-tags">
                                 <span class="skill-tag">Angular 2+/18</span>
@@ -166,7 +166,7 @@
                                 <span class="skill-tag">Flutter</span>
                             </div>
                         </div>
-                        <div class="skill-category">
+                        <div class="skill-category" data-stagger-item>
                             <h3>DevOps & Tools</h3>
                             <div class="skill-tags">
                                 <span class="skill-tag">Git/GitHub</span>
@@ -185,8 +185,8 @@
                     <div class="column-header">
                         <h3>Work Experience</h3>
                     </div>
-                    <div class="timeline">
-                        <div class="timeline-item">
+                    <div class="timeline" data-stagger>
+                        <div class="timeline-item" data-stagger-item>
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-header">
@@ -208,7 +208,7 @@
                             </div>
                         </div>
 
-                        <div class="timeline-item">
+                        <div class="timeline-item" data-stagger-item>
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-header">
@@ -227,7 +227,7 @@
                             </div>
                         </div>
 
-                        <div class="timeline-item">
+                        <div class="timeline-item" data-stagger-item>
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-header">
@@ -255,12 +255,12 @@
     <!-- Projects Section -->
     <section id="projects" class="projects section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2>Projects</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
+            <div class="projects-grid" data-stagger>
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="nexdocs">
                         <img src="assets/nexdocs1.png" alt="Nexdocs - AI-Powered Knowledge Platform">
                         <div class="image-overlay">
@@ -301,7 +301,36 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-stagger-item>
+                    <div class="project-image" data-gallery="timedial">
+                        <img src="assets/timedialdemo.gif" alt="TimeDial demo">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Gallery (4 images)</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TimeDial - Timezone Menu Bar App</h3>
+                        <div class="tech-environment">
+                            <strong>Technologies:</strong> SwiftUI, AppKit, Combine, UserDefaults, macOS
+                        </div>
+                        <div class="project-description-text">
+                            <p>Lightweight macOS menu bar app for comparing timezones with interactive analog clocks.</p>
+                        </div>
+                        <ul class="project-description feature-list">
+                            <li>Compare local time with up to two additional timezones and adjust time by dragging clock hands.</li>
+                            <li>Real-time sync across clocks with smart timezone search and persistent preferences.</li>
+                            <li>Compact mode and menu-bar-only footprint for quick checks throughout the day.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/shubham-shrivastava/timedial" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="railway">
                         <img src="assets/railway1.png" alt="Railway Control Center">
                         <div class="image-overlay">
@@ -333,7 +362,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="autoresearch">
                         <img src="assets/autoresearch1.png" alt="AutoResearch App">
                         <div class="image-overlay">
@@ -364,7 +393,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="smsify">
                         <img src="assets/smsify1.png" alt="Smsify Project">
                         <div class="image-overlay">
@@ -392,7 +421,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="tastysearch">
                         <img src="assets/tastysearch.png" alt="Review Search Tool">
                         <div class="image-overlay">
@@ -420,7 +449,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="linkedinbot">
                         <img src="assets/linkedinbot.png" alt="LinkedIn Bot">
                         <div class="image-overlay">
@@ -448,7 +477,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="soilmoisture">
                         <img src="assets/soilmoisture.jpg" alt="Soil Moisture Sensor">
                         <div class="image-overlay">
@@ -476,7 +505,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="aqms">
                         <img src="assets/aqms.jpeg" alt="Air Quality Monitoring System">
                         <div class="image-overlay">
@@ -510,12 +539,12 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2>Get In Touch</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-reveal>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -542,7 +571,7 @@
                         <a href="https://github.com/shubham-shrivastava" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form" data-reveal>
                     <form id="contactForm" onsubmit="return openMailClient();">
                         <div class="form-group">
                             <label for="subject">Subject</label>
