@@ -302,8 +302,7 @@ img {
 
 /* Hero Section */
 .hero {
-    padding: 8.5rem 0 1rem;
-    min-height: 58vh;
+    padding: 8.5rem 0 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -475,8 +474,7 @@ body:not(.reveal-ready) [data-stagger-item] {
 /* About Section */
 .about.section {
     background-color: var(--bg-color);
-    padding-top: 1rem;
-    margin-top: -1rem;
+    padding: 2rem 0;
 }
 
 .about-content {
@@ -557,7 +555,7 @@ body:not(.reveal-ready) [data-stagger-item] {
 /* Skills and Experience Section */
 .skills-experience {
     background-color: var(--bg-color);
-    padding-bottom: 2rem;
+    padding: 2rem 0;
 }
 
 .skills-experience-content {
