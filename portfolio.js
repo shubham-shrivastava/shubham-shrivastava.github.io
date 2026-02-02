@@ -150,6 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
         revealItems.forEach(item => item.classList.add('is-visible'));
         staggerContainers.forEach(container => container.classList.add('is-visible'));
     } else {
+        // Use more mobile-friendly settings
+        const isMobile = window.innerWidth <= 768;
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -158,13 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -10% 0px'
+            threshold: isMobile ? 0.01 : 0.15,
+            rootMargin: isMobile ? '0px 0px 0px 0px' : '0px 0px -10% 0px'
         });
 
         const isInView = (element) => {
             const rect = element.getBoundingClientRect();
-            return rect.top < window.innerHeight * 0.9;
+            // More lenient for mobile - trigger earlier
+            const threshold = isMobile ? 1.2 : 0.9;
+            return rect.top < window.innerHeight * threshold;
         };
 
         revealItems.forEach(item => {
@@ -185,6 +189,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 revealObserver.observe(container);
             }
         });
+    }
+    
+    // Add scroll listener to ensure visibility on mobile
+    if (window.innerWidth <= 768) {
+        const checkVisibility = () => {
+            const viewportHeight = window.innerHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            staggerContainers.forEach(container => {
+                if (!container.classList.contains('is-visible')) {
+                    const rect = container.getBoundingClientRect();
+                    // If any part of the container is in viewport, make it visible
+                    if (rect.top < viewportHeight && rect.bottom > 0) {
+                        container.classList.add('is-visible');
+                    }
+                }
+            });
+            
+            revealItems.forEach(item => {
+                if (!item.classList.contains('is-visible')) {
+                    const rect = item.getBoundingClientRect();
+                    // If any part of the item is in viewport, make it visible
+                    if (rect.top < viewportHeight && rect.bottom > 0) {
+                        item.classList.add('is-visible');
+                    }
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', checkVisibility);
+        // Check immediately
+        checkVisibility();
     }
 });
 
