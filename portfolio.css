@@ -1669,6 +1669,115 @@ body:not(.reveal-ready) [data-stagger-item] {
     }
 }
 
+.simple-page .simple-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.simple-page .simple-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    gap: 1rem;
+}
+
+.simple-page .simple-logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.simple-page .simple-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.simple-page .simple-content {
+    padding: 3.5rem 0 5rem;
+}
+
+.simple-page .simple-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.simple-page .updated {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.simple-page .simple-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    padding: 1.75rem;
+}
+
+.simple-page .simple-card h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.simple-page .simple-card h2:first-of-type {
+    margin-top: 0;
+}
+
+.simple-page .simple-card ul {
+    list-style: disc;
+    margin-left: 1.25rem;
+}
+
+.simple-page .simple-card li {
+    margin-bottom: 0.5rem;
+}
+
+.simple-page .simple-meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.simple-page .simple-meta span {
+    background: var(--highlight);
+    color: var(--text-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+}
+
+.simple-page .simple-meta a {
+    background: var(--highlight);
+    color: var(--text-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.simple-page .simple-meta a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .simple-page .simple-nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
