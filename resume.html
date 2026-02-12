@@ -3,426 +3,156 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Senior Full Stack Engineer with 9+ years building high-traffic production applications, AI-powered platforms, and scalable web products. Expert in TypeScript/React, Node.js, Python, and GraphQL with strong UI/UX design sensibility. Proven track record shipping end-to-end features from intuitive frontends to robust backend systems.">
+    content="Senior Full Stack Engineer with 9+ years building high-traffic production applications, AI-powered platforms, and scalable web products. Expert in TypeScript/React, Node.js, Python, and GraphQL.">
   <meta name="keywords"
-    content="Full Stack Engineer, TypeScript, React, Node.js, Python, FastAPI, UI/UX Design, GraphQL, PostgreSQL, Docker, Microservices, AI Integration, Cloud Infrastructure, Remote Developer, High Ownership, Rapid Prototyping">
-  <meta name="linkedin" content="https://linkedin.com/in/shubhamshrivastav">
-  <meta name="github" content="https://github.com/shubham-shrivastava">
-  <meta name="personal-website" content="https://shubham-shrivastava.github.io">
-  <meta name="email" content="shrivastava.shubham219@live.com">
-  <meta name="phone" content="+918236028730">
-  <meta name="location" content="Lalitpur, India">
-  <title>Shubham Shrivastav - Full Stack Developer</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css" media="screen">
-  <link rel="stylesheet" href="styles.css" media="print">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    content="Full Stack Engineer, TypeScript, React, Node.js, Python, FastAPI, GraphQL, PostgreSQL, Docker, Microservices, AI Integration">
+  <title>Shubham Shrivastav - Senior Full Stack Engineer</title>
+  <link rel="stylesheet" href="resume.css">
   <style>
-    .ats-section {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      visibility: hidden;
-    }
-
-    @media print {
-      .ats-section {
-        display: none;
-      }
-    }
+    /* ATS: optimize text rendering for parsing */
+    body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+    @media print { body { text-rendering: optimizeSpeed; } }
   </style>
 </head>
 
-<body>
-  <!-- ATS-friendly hidden section with plaintext contact info -->
-  <div class="ats-section" aria-hidden="true">
-    <p>Shubham Shrivastav</p>
-    <p>Full Stack Developer</p>
-    <p>Email: shrivastava.shubham219@live.com</p>
-    <p>Phone: +91 8236028730</p>
-    <p>Location: Lalitpur, India</p>
-    <p>Website: https://shubham-shrivastava.github.io</p>
-    <p>LinkedIn: https://linkedin.com/in/shubhamshrivastav</p>
-    <p>GitHub: https://github.com/shubham-shrivastava</p>
-  </div>
+<body itemscope itemtype="http://schema.org/Person">
+  <div class="resume">
 
-  <div class="container">
-    <div class="card">
-      <div class="resume">
-        <!-- Sidebar -->
-        <div class="sidebar">
-          <div class="profile-section">
-            <div class="profile-photo">
-              <img src="profile.png" alt="Shubham Shrivastav" id="profile-img">
-            </div>
-            <div>
-              <h1 class="sidebar-name">Shubham Shrivastav</h1>
-              <h2 class="sidebar-title">Senior Full Stack Engineer</h2>
-            </div>
-          </div>
+    <!-- Header: Name, title, contact - ATS parses top section first -->
+    <header class="header">
+      <h1 itemprop="name">Shubham Shrivastav</h1>
+      <p class="title">Senior Full Stack Engineer</p>
+      <div class="contact">
+        <span itemprop="email">shrivastava.shubham219@live.com</span>
+        <span class="sep">|</span>
+        <span itemprop="telephone">+91 8236028730</span>
+        <span class="sep">|</span>
+        <span itemprop="address">Lalitpur, India</span>
+        <span class="sep">|</span>
+        <a href="https://linkedin.com/in/shubhamshrivastav" itemprop="sameAs" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/shubham-shrivastava" itemprop="sameAs" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="sep">|</span>
+        <a href="https://shubham-shrivastava.github.io" itemprop="url" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      </div>
+    </header>
 
-          <!-- Contact Section -->
-          <div class="sidebar-section" itemscope itemtype="http://schema.org/Person">
-            <div class="sidebar-section-header">
-              <i class="fas fa-address-card"></i>
-              <span>CONTACT</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span><a href="mailto:shrivastava.shubham219@live.com" itemprop="email"
-                  target="_blank">shrivastava.shubham219@live.com</a></span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span><a href="tel:+918236028730" itemprop="telephone" target="_blank">+91 8236028730</a></span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span itemprop="address">Lalitpur, India</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-globe"></i>
-              <span><a href="https://shubham-shrivastava.github.io" itemprop="url"
-                  target="_blank">shubham-shrivastava.github.io</a></span>
-            </div>
-          </div>
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <ul class="summary-bullets">
+        <li><strong>9+ years</strong> building <strong>AI-powered</strong> platforms and high-traffic production apps. <strong>TypeScript, React, Node.js</strong>.</li>
+        <li>End-to-end ownership: <strong>GraphQL/REST APIs</strong>, cloud infra, UI to backend. Built <a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a>, complete <strong>AI SaaS product</strong> from vision to deployment.</li>
+        <li><strong>Remote since 2018</strong>. Technical leadership, mentoring. Fast-paced, autonomous environments.</li>
+      </ul>
+    </section>
 
-          <!-- Core Competencies Section -->
-          <div class="sidebar-section">
-            <div class="sidebar-section-header">
-              <i class="fas fa-star"></i>
-              <span>CORE COMPETENCIES</span>
-            </div>
-            <ul class="competencies-list">
-              <li>End-to-End Feature Ownership</li>
-              <li>TypeScript/React Web Development</li>
-              <li>UI/UX Design & Implementation</li>
-              <li>Node.js/Python Backend APIs</li>
-              <li>System Design & Cloud Infrastructure</li>
-              <li>GraphQL & REST APIs</li>
-              <li>High Autonomy & Rapid Prototyping</li>
-              <li>Cross-Functional Collaboration</li>
-              <li>Production-Ready Code & Testing</li>
-            </ul>
-          </div>
-
-          <!-- Skills Section -->
-          <div class="sidebar-section">
-            <div class="sidebar-section-header">
-              <i class="fas fa-code"></i>
-              <span>TECHNICAL SKILLS</span>
-            </div>
-
-            <div class="skills-category">
-              <h3 class="skills-category-title">Frontend</h3>
-              <div class="skills-container">
-                <span class="skill-tag">Angular 2+/18</span>
-                <span class="skill-tag">React 18</span>
-                <span class="skill-tag">TypeScript</span>
-                <span class="skill-tag">NextJS 14</span>
-                <span class="skill-tag">Angular 2+/18</span>
-                <span class="skill-tag">NgRx/Redux</span>
-                <span class="skill-tag">RxJS</span>
-                <span class="skill-tag">Tailwind CSS</span>
-                <span class="skill-tag">Radix UI</span>
-                <span class="skill-tag">Storybook</span>
-              </div>
-            </div>
-
-            <div class="skills-category">
-              <h3 class="skills-category-title">Backend & APIs</h3>
-              <div class="skills-container">
-                <span class="skill-tag">Node.js/NestJS</span>
-                <span class="skill-tag">Python/FastAPI</span>
-                <span class="skill-tag">TypeScript</span>
-                <span class="skill-tag">GraphQL</span>
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">tRPC</span>
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">Redis</span>
-                <span class="skill-tag">Prisma ORM</span>
-                <span class="skill-tag">Microservices</span>
-              </div>
-            </div>
-
-            <div class="skills-category">
-              <h3 class="skills-category-title">Infrastructure & DevOps</h3>
-              <div class="skills-container">
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Railway</span>
-                <span class="skill-tag">CI/CD Pipelines</span>
-                <span class="skill-tag">GitHub Actions</span>
-                <span class="skill-tag">AWS</span>
-              </div>
-            </div>
-
-            <div class="skills-category">
-              <h3 class="skills-category-title">Testing & Tools</h3>
-              <div class="skills-container">
-                <span class="skill-tag">Jest/Jasmine</span>
-                <span class="skill-tag">React Testing Library</span>
-                <span class="skill-tag">Cypress/Playwright</span>
-                <span class="skill-tag">Git/GitHub</span>
-                <span class="skill-tag">Monorepos (NX)</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social Section -->
-          <div class="sidebar-section social-section" itemscope itemtype="http://schema.org/Person">
-            <div class="sidebar-section-header">
-              <i class="fas fa-share-alt"></i>
-              <span>SOCIAL</span>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-linkedin"></i>
-              <span><a href="https://linkedin.com/in/shubhamshrivastav" itemprop="sameAs" rel="me nofollow"
-                  class="linkedin-profile" data-source="linkedin"
-                  target="_blank">linkedin.com/in/shubhamshrivastav</a></span>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-github"></i>
-              <span><a href="https://github.com/shubham-shrivastava" itemprop="sameAs" rel="me nofollow"
-                  class="github-profile" data-source="github" target="_blank">github.com/shubham-shrivastava</a></span>
-            </div>
-          </div>
-          <!-- Education Section -->
-          <div class="sidebar-section education-section">
-            <div class="sidebar-section-header">
-              <i class="fas fa-graduation-cap"></i>
-              <span>EDUCATION</span>
-            </div>
-            <div class="education">
-              <h3>Bachelor of Engineering</h3>
-              <h4>Information Technology</h4>
-              <div class="education-location">Lakshmi Narain College of Technology</div>
-              <div class="education-date">2012-08 - 2016-07</div>
-              <div class="education-location">Bhopal, India</div>
-            </div>
-          </div>
-
-          <!-- Certifications Section -->
+    <!-- Skills - keyword-rich for ATS -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-group">
+          <strong>Frontend:</strong> React, Angular, TypeScript, Next.js, NgRx, Tailwind, Storybook
         </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-          <!-- Professional Summary with Qualifications -->
-          <section class="section about-section">
-            <div class="section-header">
-              <i class="fas fa-user"></i>
-              <h2>PROFESSIONAL SUMMARY</h2>
-            </div>
-            <p class="bio">
-              <span class="highlight">Senior Full Stack Engineer</span> with <span class="highlight">9+ years</span>
-              building <span class="highlight">high-traffic production applications</span> and <span
-                class="highlight">AI-powered platforms</span> used by millions. Expert in <span
-                class="highlight">TypeScript/React</span> with strong <span class="highlight">UI/UX design
-                sensibility</span>, shipping <span class="highlight">end-to-end features</span> from clean UIs to <span
-                class="highlight">Node.js/Python backends</span>, <span class="highlight">GraphQL/REST APIs</span>, and
-              <span class="highlight">cloud infrastructure</span>. Built <a href="https://nexdocs.in" target="_blank"
-                rel="noopener noreferrer">NexDocs</a>, a complete AI SaaS product, demonstrating <span
-                class="highlight">extreme ownership</span> from product vision to deployment. Excel at <span
-                class="highlight">rapid prototyping</span>, <span class="highlight">collaborating with cross-functional
-                teams</span>, and shipping <span class="highlight">production-quality code</span> with velocity. Working
-              <span class="highlight">remotely since 2018</span>, thriving in <span class="highlight">fast-paced,
-                autonomous environments</span>.
-            </p>
-          </section>
-
-          <!-- Work Experience -->
-          <section class="section experience-section">
-            <div class="section-header">
-              <i class="fas fa-briefcase"></i>
-              <h2>PROFESSIONAL EXPERIENCE</h2>
-            </div>
-
-            <div class="job">
-              <div class="job-header">
-                <div class="job-title-container">
-                  <h3>Full Stack Developer</h3>
-                  <h4>Luzmo (Formerly CumuLio)</h4>
-                  <div class="job-date">2019-06 - Present</div>
-                </div>
-                <div class="job-location">Remote</div>
-              </div>
-              <div class="tech-environment">
-                <strong>Technologies:</strong> React, Angular 18, TypeScript, Node.js, Express, GraphQL, PostgreSQL,
-                Python, FastAPI, REST APIs, Redis, NX Monorepo, Jest, Cypress, Playwright, CI/CD, AWS
-              </div>
-              <ul class="job-description">
-                <li><span class="highlight">Shipped end-to-end features</span> with full ownership from <span
-                    class="highlight">UI design to backend systems</span>. Built <span
-                    class="highlight">TypeScript/React frontends</span> with <span class="highlight">intuitive,
-                    functional interfaces</span> and <span class="highlight">Node.js/GraphQL APIs</span>. <span
-                    class="highlight">Collaborated closely with Product and Design teams</span>, shaping UX decisions
-                  based on user feedback and technical constraints.</li>
-                <li><span class="highlight">Optimized AI-powered analytics assistant</span> serving thousands of users.
-                  Architected <span class="highlight">async backend workflows</span>, achieving <span
-                    class="highlight">40% performance improvement</span> through Redis caching. <span
-                    class="highlight">Worked directly with customers</span> to synthesize feedback into feature
-                  improvements.</li>
-                <li><span class="highlight">Led technical architecture</span> for micro-frontend platform using NX
-                  Monorepo, achieving <span class="highlight">60% faster build times</span>. Delivered <span
-                    class="highlight">fault-tolerant systems</span> supporting <span class="highlight">millions of
-                    requests daily with 99.9% uptime</span> through strong system design patterns.</li>
-                <li>Increased test coverage from <span class="highlight">65% to 92%</span> using Jest, Cypress, and
-                  Playwright. Thrived in <span class="highlight">globally distributed, async-first remote team</span>,
-                  collaborating across Engineering, Growth, and Sales.</li>
-              </ul>
-            </div>
-
-            <div class="job">
-              <div class="job-header">
-                <div class="job-title-container">
-                  <h3>Backend Developer</h3>
-                  <h4>Luzmo (Formerly CumuLio)</h4>
-                  <div class="job-date">2018-01 - 2019-06</div>
-                </div>
-                <div class="job-location">Remote</div>
-              </div>
-              <div class="tech-environment">
-                <strong>Technologies:</strong> Node.js, Express, TypeScript, MongoDB, PostgreSQL, REST APIs,
-                Microservices, Docker, GitHub Actions, AWS Lambda
-              </div>
-              <ul class="job-description">
-                <li>Architected <span class="highlight">scalable RESTful APIs and microservices</span> using <span
-                    class="highlight">Node.js/TypeScript</span>, processing <span class="highlight">thousands of
-                    requests daily with 99.9% uptime</span>. Applied <span class="highlight">system design
-                    patterns</span> including async job queues, circuit breakers, and strong data modeling.</li>
-                <li>Built <span class="highlight">data processing pipelines</span> and integration connectors for 5+
-                  platforms (<span class="highlight">BigQuery, Snowflake, PostgreSQL</span>). Optimized queries,
-                  database migrations, and workflows across distributed services.</li>
-              </ul>
-            </div>
-
-            <div class="job">
-              <div class="job-header">
-                <div class="job-title-container">
-                  <h3>Software Engineer</h3>
-                  <h4>Persistent System Ltd.</h4>
-                  <div class="job-date">2016-09 - 2017-09</div>
-                </div>
-                <div class="job-location">Nagpur, India</div>
-              </div>
-              <div class="tech-environment">
-                <strong>Technologies:</strong> Python, Django, OCR, Tesseract, Java, Windows/.NET, React
-              </div>
-              <ul class="job-description">
-                <li><span class="highlight">Collaborated with cross-functional teams</span> to deliver <span
-                    class="highlight">mission-critical, highly secure applications</span> for <span
-                    class="highlight">government clients</span>, meeting strict security standards and regulatory
-                  requirements.</li>
-                <li><span class="highlight">Led technical design</span> for <span class="highlight">automated
-                    translation processing system</span> using <span class="highlight">OCR/Tesseract</span>, eliminating
-                  data errors for 1000s of documents monthly.</li>
-                <li>Built <span class="highlight">cross-platform deployment solution</span> reducing setup time from
-                  days to minutes, saving 120+ IT staff hours per cycle.</li>
-                <li>Developed <span class="highlight">Python backend</span> for <span class="highlight">React-based
-                    internal tool</span> that visualized LinkedIn profile data with <span class="highlight">intuitive
-                    UI/UX</span>.</li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Personal Projects -->
-          <section class="section projects-section">
-            <div class="section-header">
-              <i class="fas fa-laptop-code"></i>
-              <h2>PROJECTS</h2>
-            </div>
-
-            <div class="projects-grid">
-              <div class="project">
-                <h3><a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a> - AI-Powered
-                  Knowledge Platform</h3>
-                <div class="tech-environment project-tech">
-                  <strong>Technologies:</strong> React, Next.js 14, TypeScript, Node.js, NestJS, tRPC, PostgreSQL
-                  (pgvector), Prisma, Python FastAPI, OpenAI GPT-4, Redis, Docker, Railway
-                </div>
-                <p class="project-description">
-                  <span class="highlight">Shipped complete AI SaaS product from scratch</span> as solopreneur with <span
-                    class="highlight">TypeScript/React frontend</span> featuring <span class="highlight">intuitive
-                    UI/UX</span> and <span class="highlight">microservices backend</span> (Node.js/NestJS +
-                  Python/FastAPI). Built <span class="highlight">async processing pipelines</span> for document
-                  ingestion with GPT-4 integration, real-time streaming (SSE), and <span
-                    class="highlight">fault-tolerant architecture</span>. Reduced processing time by <span
-                    class="highlight">70%</span> through parallel generation system.
-                </p>
-              </div>
-
-              <div class="project">
-                <h3><a href="https://github.com/shubham-shrivastava/timedial" target="_blank"
-                    rel="noopener noreferrer">TimeDial</a> - macOS Menu Bar Timezone App</h3>
-                <div class="tech-environment project-tech">
-                  <strong>Technologies:</strong> SwiftUI, AppKit, Combine, UserDefaults, macOS
-                </div>
-                <p class="project-description">
-                  Lightweight macOS menu bar app for comparing timezones with <span class="highlight">interactive analog
-                    clocks</span> and <span class="highlight">polished UI/UX</span>. Built with <span
-                    class="highlight">SwiftUI</span> featuring real-time sync across clocks, smart timezone search,
-                  drag-to-adjust time, and persistent preferences. Demonstrates versatility across different tech stacks
-                  and platforms.
-                </p>
-              </div>
-
-              <div class="project">
-                <h3><a href="https://github.com/shubham-shrivastava/autoresearch" target="_blank"
-                    rel="noopener noreferrer">AutoResearch</a> - Research Aggregation App</h3>
-                <div class="tech-environment project-tech">
-                  <strong>Technologies:</strong> Flutter, Dart, Firebase, Google Auth, REST APIs, PDF Generation, Cloud
-                  Functions
-                </div>
-                <p class="project-description">
-                  <span class="highlight">Cross-platform mobile app</span> (Android/iOS) built with <span
-                    class="highlight">Flutter</span> that aggregates and analyzes structured information from multiple
-                  data sources. Features PDF report generation, Firebase integration, and <span
-                    class="highlight">intuitive UI</span> that reduced research time by <span
-                    class="highlight">70%</span> for users.
-                </p>
-              </div>
-            </div>
-          </section>
+        <div class="skills-group">
+          <strong>Backend:</strong> Node.js, NestJS, Python, FastAPI, GraphQL, REST, tRPC, PostgreSQL, Redis, Prisma, Microservices
+        </div>
+        <div class="skills-group">
+          <strong>AI & ML:</strong> OpenAI GPT-4, LangChain, pgvector, Embeddings, RAG
+        </div>
+        <div class="skills-group">
+          <strong>Infrastructure & Tools:</strong> Docker, Railway, CI/CD, GitHub Actions, AWS, Jest, Cypress, Playwright, NX
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <article class="job">
+        <div class="job-header">
+          <div>
+            <h3>Full Stack Developer</h3>
+            <p class="company">Luzmo (Formerly Cumul.io)</p>
+          </div>
+          <div class="job-meta">
+            <span class="date">June 2019 &ndash; Present</span>
+            <span class="location">Remote</span>
+          </div>
+        </div>
+        <p class="tech-stack">React, Angular, TypeScript, Node.js, GraphQL, Python, FastAPI, Redis, NX</p>
+        <ul>
+          <li><strong>40% performance gain</strong> on AI analytics assistant: Redis caching, async workflows.</li>
+          <li><strong>AI-powered data visualization</strong>: <strong>GPT-4</strong> auto-generates contextual insights from dashboards. Data aggregation pipelines, privacy-preserving.</li>
+          <li><strong>60% faster builds</strong>, led NX micro-frontend architecture. <strong>65% → 92%</strong> test coverage.</li>
+          <li>End-to-end features: React/GraphQL frontends, Node.js APIs. Mentored 5+ engineers. Shipped with Product & Design.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <div>
+            <h3>Backend Developer</h3>
+            <p class="company">Luzmo (Formerly Cumul.io)</p>
+          </div>
+          <div class="job-meta">
+            <span class="date">January 2018 &ndash; June 2019</span>
+            <span class="location">Remote</span>
+          </div>
+        </div>
+        <p class="tech-stack">Node.js, TypeScript, MongoDB, PostgreSQL, REST, Microservices, Docker</p>
+        <ul>
+          <li><strong>99.9% uptime</strong>. Scalable REST APIs and microservices (Node.js).</li>
+          <li>Data pipelines and connectors for BigQuery, Snowflake, PostgreSQL.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <div>
+            <h3>Software Engineer</h3>
+            <p class="company">Persistent Systems Ltd.</p>
+          </div>
+          <div class="job-meta">
+            <span class="date">September 2016 &ndash; September 2017</span>
+            <span class="location">Nagpur, India</span>
+          </div>
+        </div>
+        <p class="tech-stack">Python, Django, OCR, Tesseract, React</p>
+        <ul>
+          <li><strong>120+ IT hours saved</strong> per cycle: cross-platform deployment automation.</li>
+          <li>OCR translation system; eliminated errors for thousands of docs monthly. Secure apps for government.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <article class="project">
+        <h3><a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a> - AI-Powered Knowledge Platform</h3>
+        <p class="tech-stack">Next.js, TypeScript, NestJS, FastAPI, PostgreSQL (pgvector), GPT-4, Redis</p>
+        <p><strong>70% faster</strong> processing. Full AI SaaS: microservices, GPT-4, real-time streaming. nexdocs.in</p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://apps.apple.com/us/app/timedial/id6758935499" target="_blank" rel="noopener noreferrer">TimeDial</a> - macOS Menu Bar Timezone App</h3>
+        <p class="tech-stack">SwiftUI, AppKit</p>
+        <p><strong>Interactive analog clocks</strong>, real-time sync, smart search. App Store.</p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://github.com/shubham-shrivastava/autoresearch" target="_blank" rel="noopener noreferrer">AutoResearch</a> - Research Aggregation App</h3>
+        <p class="tech-stack">Flutter, Firebase, Cloud Functions</p>
+        <p><strong>70%</strong> faster research. Cross-platform (Android/iOS), PDF reports.</p>
+      </article>
+    </section>
+
   </div>
-
-  <script>
-    // Script to ensure contact information is properly displayed in PDF exports
-    document.addEventListener('DOMContentLoaded', function () {
-      // Add a class to indicate the document is ready for printing
-      document.body.classList.add('pdf-ready');
-
-      // Ensure ATS-friendly metadata is included in the text layer of the PDF
-      const addAtsMetadata = function () {
-        // Create hidden text elements with machine-readable information
-        const links = document.querySelectorAll('.linkedin-profile, .github-profile');
-        links.forEach(link => {
-          // Add text content directly in the document that's readable by ATS
-          const url = link.getAttribute('href');
-          const source = link.dataset.source || '';
-          const textNode = document.createTextNode(source.toUpperCase() + ': ' + url + ' ');
-
-          // Ensure this text is part of the document for ATS parsing
-          const span = document.createElement('span');
-          span.style.position = 'absolute';
-          span.style.left = '-9999px';
-          span.style.fontSize = '0';
-          span.appendChild(textNode);
-          document.body.appendChild(span);
-        });
-      };
-
-      // Run the function
-      addAtsMetadata();
-    });
-  </script>
 </body>
 
 </html>

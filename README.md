@@ -24,7 +24,7 @@
 
 I'm a **Senior Full Stack Developer** with **9+ years of experience** building high-traffic production applications and AI-powered features at scale. I specialize in architecting scalable backend systems, integrating AI/LLM capabilities, and shipping end-to-end features that serve millions of users.
 
-- 🚀 Currently working at **Luzmo** (formerly CumuLio) as a Full Stack Developer
+- 🚀 Currently working at **Luzmo** (formerly Cumul.io) as a Full Stack Developer
 - 🤖 Deep expertise in **AI Integration** (OpenAI GPT-4, LangChain, RAG Systems, Vector Databases)
 - 🏗️ Proficient in **Node.js, Python, TypeScript, React, Angular** and modern web architectures
 - 🌍 **Remote-first** professional since 2018, thriving in async-first environments
