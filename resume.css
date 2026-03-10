@@ -69,7 +69,7 @@ body {
 
 /* Sections */
 .section {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-title {
@@ -78,16 +78,21 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #1a1a1a;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   padding-bottom: 0.2rem;
   border-bottom: 1px solid #ccc;
 }
 
 /* Summary */
-.summary {
+.summary-text {
   font-size: 11pt;
   line-height: 1.5;
-  text-align: justify;
+  margin-bottom: 0;
+}
+
+.summary-text a {
+  color: #1a1a1a;
+  text-decoration: underline;
 }
 
 .summary-bullets {
@@ -106,21 +111,25 @@ body {
   text-decoration: underline;
 }
 
-/* Skills */
-.skills-grid {
+/* Skills - Compact Layout */
+.skills-section {
+  margin-bottom: 1.25rem;
+}
+
+.skills-compact {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
-.skills-group {
+.skills-row {
   font-size: 10.5pt;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
-.skills-group strong {
+.skills-row strong {
   font-weight: 700;
-  margin-right: 0.25rem;
+  margin-right: 0.3rem;
 }
 
 strong {
@@ -129,8 +138,8 @@ strong {
 
 /* Jobs */
 .job {
-  margin-bottom: 1.25rem;
-  padding-top: 1rem;
+  margin-bottom: 1.1rem;
+  padding-top: 0.9rem;
   border-top: 1px solid #eee;
 }
 
@@ -149,7 +158,7 @@ strong {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .job h3 {
@@ -177,9 +186,9 @@ strong {
 }
 
 .tech-stack {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #555;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-style: italic;
 }
 
@@ -192,13 +201,13 @@ strong {
 
 .job li,
 .project li {
-  margin-bottom: 0.35rem;
-  line-height: 1.4;
+  margin-bottom: 0.3rem;
+  line-height: 1.38;
 }
 
 /* Projects */
 .project {
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .project:last-child {
@@ -206,9 +215,9 @@ strong {
 }
 
 .project h3 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .project h3 a {
@@ -221,33 +230,44 @@ strong {
 }
 
 .project p {
-  margin-bottom: 0.4rem;
-  line-height: 1.4;
+  margin-bottom: 0.35rem;
+  line-height: 1.38;
 }
 
 .project .tech-stack {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
-/* Print styles */
+/* Print styles — single-column, two-page layout */
 @media print {
   @page {
     size: letter;
-    margin: 0.4in;
+    margin: 0.4in 0.4in 0.6in;
+
+    @bottom-center {
+      content: counter(page) " / " counter(pages);
+      font-family: 'Source Sans 3', Arial, sans-serif;
+      font-size: 8pt;
+      color: #999;
+    }
+  }
+
+  html {
+    font-size: 13.5px;
   }
 
   html, body {
     margin: 0;
     padding: 0;
     background: #fff;
-    font-size: 10pt;
-    line-height: 1.4;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
   body {
     padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.32;
   }
 
   .resume {
@@ -255,22 +275,12 @@ strong {
   }
 
   .header {
-    padding-bottom: 0.65rem;
-    margin-bottom: 0.65rem;
-  }
-
-  .header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.15rem;
+    padding-bottom: 0.55rem;
+    margin-bottom: 0.55rem;
   }
 
   .header .title {
-    font-size: 0.95rem;
-    margin-bottom: 0.35rem;
-  }
-
-  .contact {
-    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
   }
 
   .section {
@@ -278,86 +288,64 @@ strong {
   }
 
   .section-title {
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
     padding-bottom: 0.15rem;
   }
 
-  .summary {
-    font-size: 10pt;
-    line-height: 1.42;
-    margin-bottom: 0;
+  .summary-text {
+    line-height: 1.35;
   }
 
-  .summary-bullets li {
-    margin-bottom: 0.28rem;
+  .skills-section {
+    margin-bottom: 0.7rem;
+  }
+
+  .skills-compact {
+    gap: 0.18rem;
   }
 
   .job {
-    padding-top: 0.6rem;
-    border-top-color: #ddd;
+    margin-bottom: 0.6rem;
+    padding-top: 0.5rem;
   }
 
   .job:first-of-type {
     padding-top: 0;
   }
 
-  .skills-grid {
-    gap: 0.2rem;
-  }
-
-  .skills-group {
-    font-size: 9.5pt;
-    line-height: 1.35;
-  }
-
-  .job {
-    margin-bottom: 0.7rem;
-  }
-
   .job-header {
-    margin-bottom: 0.28rem;
-  }
-
-  .job h3 {
-    font-size: 0.95rem;
-  }
-
-  .job .company,
-  .tech-stack {
-    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
   }
 
   .tech-stack {
-    margin-bottom: 0.28rem;
+    margin-bottom: 0.25rem;
   }
 
   .job li,
   .project li {
-    margin-bottom: 0.32rem;
-    line-height: 1.4;
+    margin-bottom: 0.18rem;
   }
 
   .project {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .project h3 {
-    font-size: 0.9rem;
-    margin-bottom: 0.18rem;
-  }
-
-  .project p {
-    font-size: 10pt;
-    margin-bottom: 0.25rem;
-    line-height: 1.4;
+    margin-bottom: 0.15rem;
   }
 
   .project .tech-stack {
-    margin-bottom: 0.18rem;
+    margin-bottom: 0.2rem;
   }
 
-  /* Prevent URLs from appearing after links */
+  .page-break {
+    page-break-before: always;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    border: none;
+  }
+
   a[href]::after {
     content: none !important;
   }
