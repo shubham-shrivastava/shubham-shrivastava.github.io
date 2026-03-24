@@ -44,7 +44,7 @@
     <!-- Professional Summary -->
     <section class="section">
       <h2 class="section-title">Professional Summary</h2>
-      <p class="summary-text"><strong>Senior Full Stack Software Engineer</strong> with <strong>9+ years</strong> building high-craft web applications, publishing platforms, and creator tools. Expert in <strong>React, Angular, TypeScript, Node.js, Python, PostgreSQL</strong> with deep backend experience. <strong>Product-minded engineer</strong> who partners with Product and Design to architect complex features end-to-end—built <a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a> (AI-powered publishing platform) and <a href="https://railway-control-center-frontend.up.railway.app/" target="_blank" rel="noopener noreferrer">Railway Control Center</a> (full-stack SaaS). Mentor engineers, champion technical excellence, and drive measurable impact through system optimization and scalable architecture. <strong>Remote since 2018</strong>.</p>
+      <Mentor class="summary-text"><strong>Senior Full Stack Software Engineer</strong> with <strong>9+ years</strong> building high-craft web applications and <strong>AI-powered platforms</strong>. Expert in <strong>Angular, React, TypeScript, Node.js, Python, PostgreSQL</strong> with deep experience in <strong>LLM integration, AI orchestration, RAG, and evaluation systems</strong>. Product-minded engineer who architects complex features end-to-end.<br />Built <a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a> (AI publishing platform with multi-provider LLM orchestration, RAG pipeline, and evaluation framework) and <a href="https://github.com/shubham-shrivastava/autoresearch" target="_blank" rel="noopener noreferrer">AutoResearch</a> (multi-agent AI research system using CrewAI). Mentored engineers, champion technical excellence, and drive measurable impact through scalable architecture. <strong>Remote since 2018</strong>.</p>
     </section>
 
     <!-- Skills - keyword-rich for ATS -->
@@ -52,7 +52,10 @@
       <h2 class="section-title">Technical Skills</h2>
       <div class="skills-compact">
         <div class="skills-row">
-          <strong>Frontend:</strong> React • Angular • TypeScript • JavaScript • Next.js • HTML • CSS • Tailwind CSS • Rich Text Editors
+          <strong>AI & LLMs:</strong> LLM Integration (OpenAI, Anthropic, Gemini) • RAG • pgvector • Prompt Engineering • AI Orchestration • Evaluation Frameworks • Embeddings • SSE Streaming
+        </div>
+        <div class="skills-row">
+          <strong>Frontend:</strong> React • Angular • TypeScript • JavaScript • Next.js • HTML • CSS • Tailwind CSS
         </div>
         <div class="skills-row">
           <strong>Backend:</strong> Node.js • NestJS • Python • FastAPI • GraphQL • REST APIs • Microservices • Firebase Functions
@@ -83,7 +86,7 @@
         </div>
         <p class="tech-stack">JavaScript, TypeScript, React, Angular, Node.js, GraphQL, Python, FastAPI, PostgreSQL, Redis, MongoDB, Docker</p>
         <ul>
-          <li><strong>Product-minded full-stack development</strong>: Partner closely with Product and Design to architect and ship complex features end-to-end for analytics SaaS serving <strong>thousands of concurrent users</strong>. Delivered <strong>40% performance improvement in AI features</strong> through Redis caching, query optimization, and async workflows.</li>
+          <li><strong>AI-powered product development</strong>: Partner closely with Product and Design to architect and ship complex features including <strong>LLM-powered capabilities</strong> for analytics SaaS serving <strong>thousands of concurrent users</strong>. Delivered <strong>40% performance improvement in AI features</strong> through Redis caching, query optimization, and async workflows.</li>
           <li><strong>Complex feature architecture</strong>: Led technical design and implementation of interactive dashboards, real-time data visualization, and content publishing tools. Built scalable <strong>REST APIs and microservices</strong> using Node.js/TypeScript with PostgreSQL, processing high-throughput requests with low latency.</li>
           <li><strong>Legacy codebase evolution</strong>: Architected micro-frontend migration achieving <strong>60% faster builds</strong> while safely refactoring legacy code. Applied systems thinking to enhance scalability and maintainability, championing patterns that elevated team-wide standards.</li>
           <li><strong>Technical leadership</strong>: Mentored 5+ engineers through code reviews, pairing sessions, and architecture discussions. Implemented comprehensive testing (Jest, Cypress) increasing coverage from <strong>65% → 92%</strong>, reducing production issues.</li>
@@ -115,24 +118,33 @@
 
       <article class="project">
         <h3><a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a> - AI-Powered Publishing Platform</h3>
-        <p class="tech-stack">Next.js, React, TypeScript, Tailwind CSS, NestJS, FastAPI, PostgreSQL (pgvector), Redis, Rich Text Editor</p>
+        <p class="tech-stack">Next.js, React, TypeScript, NestJS, FastAPI, PostgreSQL (pgvector), Redis, OpenAI, Anthropic, Gemini</p>
         <ul>
-          <li>Architected full-stack microservices with Next.js frontend, NestJS data API, and FastAPI for AI features</li>
-          <li>Built WYSIWYG rich text editor with collaborative editing capabilities and real-time content synchronization</li>
-          <li>Implemented real-time streaming with Server-Sent Events (SSE) for live AI content generation</li>
-          <li>Engineered fault-tolerant system with circuit breakers achieving <strong>70% faster</strong> content generation through parallel processing</li>
+          <li>Architected <strong>AI orchestration layer</strong> with multi-provider LLM integration (OpenAI, Anthropic, Gemini) for intelligent content generation with provider fallback and cost optimization</li>
+          <li>Built <strong>RAG pipeline</strong> using pgvector with OpenAI embeddings for context-aware retrieval and generation, including chunking strategies and semantic search</li>
+          <li>Designed <strong>prompt management system</strong> and <strong>evaluation framework</strong> to measure AI output quality, reliability, and cost/latency tradeoffs</li>
+          <li>Implemented real-time <strong>LLM streaming</strong> via Server-Sent Events (SSE) with fault-tolerant circuit breakers, achieving <strong>70% faster</strong> content generation through parallel processing</li>
         </ul>
       </article>
 
-    <div class="page-break"></div>
+      <article class="project">
+        <h3><a href="https://github.com/shubham-shrivastava/autoresearch" target="_blank" rel="noopener noreferrer">AutoResearch</a> - AI-Powered Research Agent</h3>
+        <p class="tech-stack">Python, Flask, CrewAI, LangChain, OpenAI, Gemini, Groq, SerperDev, Flutter, Firebase, Cloud Firestore</p>
+        <ul>
+          <li>Built <strong>multi-agent AI system</strong> using CrewAI with specialized Researcher and Reporter agents orchestrated in sequential pipelines for automated research synthesis</li>
+          <li>Implemented <strong>multi-provider LLM orchestration</strong> (OpenAI GPT-4o, Google Gemini, Groq Llama3) with environment-based model selection and tool use (web search, website RAG)</li>
+          <li>Designed production backend with <strong>Firestore-based rate limiting</strong>, Firebase App Check security, and research paper analysis via LLM-powered web scraping</li>
+          <li>Built cross-platform Flutter frontend (Android/iOS) with markdown rendering, voice input, and automated PDF report generation</li>
+        </ul>
+      </article>
 
       <article class="project">
-        <h3><a href="https://railway-control-center-frontend.up.railway.app/" target="_blank" rel="noopener noreferrer">Railway Control Center</a> - Service Management Platform</h3>
-        <p class="tech-stack">React, Next.js, TypeScript, Node.js, NestJS, GraphQL, PostgreSQL, Prisma, Tailwind CSS</p>
+        <h3><a href="https://github.com/shubham-shrivastava/ocularis" target="_blank" rel="noopener noreferrer">Ocularis</a> - Autonomous Browsing Agent</h3>
+        <p class="tech-stack">Python, FastAPI, Playwright, PostgreSQL, pgvector, Pydantic, Next.js, TypeScript, Docker</p>
         <ul>
-          <li>Architected TypeScript + GraphQL API layer with strong typing, validation, and comprehensive error handling</li>
-          <li>Built cron-based scheduler for async job execution with scheduled deployments and health monitoring</li>
-          <li>Designed intuitive React UI with real-time status updates and unified container management dashboard</li>
+          <li>Built open-source autonomous web agent that converts high-level goals into actionable browsing plans with postcondition checks and structured completion criteria</li>
+          <li>Implemented reliability layer with screenshot-hash stuck detection (MD5 + SSIM), automated recovery strategies, and circuit-breaker pause for human-in-the-loop escalation</li>
+          <li>Designed context-aware extraction and reasoning flow to identify relevant candidates from noisy pages, compare options, and return concise structured answers</li>
         </ul>
       </article>
 
@@ -143,15 +155,6 @@
           <li>Built native macOS menu bar app for remote workers managing multiple timezones with seamless system integration</li>
           <li>Implemented interactive analog clocks with real-time sync and drag-to-adjust time across all clocks</li>
           <li>Integrated smart timezone search with 450+ zones and published to App Store with focus on performance</li>
-        </ul>
-      </article>
-
-      <article class="project">
-        <h3><a href="https://github.com/shubham-shrivastava/autoresearch" target="_blank" rel="noopener noreferrer">AutoResearch</a> - Cross-Platform Research App</h3>
-        <p class="tech-stack">Flutter, Firebase, Cloud Functions, REST APIs</p>
-        <ul>
-          <li>Built cross-platform mobile app (Android/iOS) aggregating structured information from multiple data sources</li>
-          <li>Implemented automated PDF report generation achieving <strong>70% faster</strong> research workflows</li>
         </ul>
       </article>
     </section>

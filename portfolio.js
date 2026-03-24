@@ -302,6 +302,13 @@ class LightboxGallery {
                     { src: 'assets/railway4.png', alt: 'Railway Control Center - Health Dashboard' }
                 ]
             },
+            ocularis: {
+                title: 'Ocularis - Autonomous Browsing Agent',
+                type: 'web', // Web application screenshot
+                images: [
+                    { src: 'assets/ocularis1.jpeg', alt: 'Ocularis - Autonomous Browsing Agent Dashboard' }
+                ]
+            },
             timedial: {
                 title: 'TimeDial - Timezone Menu Bar App',
                 type: 'web', // macOS app screenshots

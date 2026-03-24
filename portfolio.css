@@ -802,14 +802,16 @@ body:not(.reveal-ready) [data-stagger-item] {
     height: 210px;
 }
 
-.project-image img {
+.project-image img,
+.project-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.project-image:hover img {
+.project-image:hover img,
+.project-image:hover video {
     transform: scale(1.05);
 }
 
