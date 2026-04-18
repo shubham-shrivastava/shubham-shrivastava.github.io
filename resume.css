@@ -266,8 +266,8 @@ strong {
 
   body {
     padding: 0;
-    font-size: 9.5pt;
-    line-height: 1.32;
+    font-size: 10.25pt;
+    line-height: 1.36;
   }
 
   .resume {
@@ -293,7 +293,13 @@ strong {
   }
 
   .summary-text {
+    font-size: 10.25pt;
     line-height: 1.35;
+  }
+
+  .skills-row {
+    font-size: 10.25pt;
+    line-height: 1.36;
   }
 
   .skills-section {
