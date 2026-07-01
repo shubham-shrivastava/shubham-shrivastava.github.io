@@ -261,6 +261,46 @@
             </div>
             <div class="projects-grid" data-stagger>
                 <div class="project-card" data-stagger-item>
+                    <div class="project-image" data-gallery="shipguarde">
+                        <img src="assets/shipguarde1.png" alt="ShipGuarde - AI Quality Gate for Releases">
+                        <div class="image-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>View Gallery (6 images)</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ShipGuarde - AI Quality Gate for Releases <span style="font-weight: 500; color: var(--text-secondary, #64748b);">(Founder)</span></h3>
+                        <div class="tech-environment">
+                            <strong>Technologies:</strong> Node.js, Fastify, TypeScript, BullMQ, Redis, PostgreSQL (Prisma), Zod, WebSockets, Python, Playwright, Docker, Next.js 15
+                        </div>
+                        <div class="project-description-text">
+                            <p>A multi-agent platform that protects every URL and every pull request - visual QA, accessibility, performance, security, lint, and more - backed by a single plain-English Ship / Do-not-ship verdict any non-engineer can read.</p>
+                            <div class="project-description-expandable" style="display: none;">
+                                <p>Vision-first visual testing is the hero, surrounded by an extensible catalog of supporting agents. Three run modes - on-demand against any URL, PR-triggered, and scheduled cron - all share the same orchestrator and verdict UI.</p>
+                            </div>
+                        </div>
+                        <ul class="project-description feature-list">
+                            <li>Founded and architected the platform: a Node.js/Fastify orchestrator coordinates isolated BullMQ workers that run every agent in parallel, with per-agent timeouts and retry policy so one agent's failure never fails the run.</li>
+                            <li>Designed the vision-first Visual QA agent - plain-English flow descriptions executed by a Playwright + Vision LLM loop - as the flagship of an extensible multi-agent catalog (Console & Network, a11y, Performance, SEO, Security, Visual Regression, and more).</li>
+                            <div class="project-description-expandable" style="display: none;">
+                                <li>Built the distributed data flow across services with typed contracts (shared Zod schemas), real-time WebSocket progress events, and multi-tenant Postgres via Prisma.</li>
+                                <li>Added an eval harness that regression-guards each agent's precision/recall/F1 against fixture cases, keeping verdict quality stable as agents and prompts evolve.</li>
+                                <li>Fault isolation built in: only infrastructure errors are retried; real failures surface as findings that roll up into one plain-English Ship / Do-not-ship verdict.</li>
+                            </div>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://shipguarde.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit ShipGuarde
+                            </a>
+                        </div>
+                        <button class="show-more-btn" onclick="toggleProjectDescription(this)">
+                            <span class="show-more-text">Show More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-stagger-item>
                     <div class="project-image" data-gallery="nexdocs">
                         <img src="assets/nexdocs1.png" alt="Nexdocs - AI-Powered Knowledge Platform">
                         <div class="image-overlay">

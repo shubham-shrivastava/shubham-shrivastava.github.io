@@ -277,6 +277,18 @@ function openMailClient() {
 class LightboxGallery {
     constructor() {
         this.galleries = {
+            shipguarde: {
+                title: 'ShipGuarde - AI Quality Gate for Releases',
+                type: 'web', // Web application screenshots
+                images: [
+                    { src: 'assets/shipguarde1.png', alt: 'ShipGuarde - Project dashboard with Ship verdict and recent runs' },
+                    { src: 'assets/shipguarde2.png', alt: 'ShipGuarde - Plain-English QA report with per-agent findings' },
+                    { src: 'assets/shipguarde3.png', alt: 'ShipGuarde - Pull request gating view' },
+                    { src: 'assets/shipguarde4.png', alt: 'ShipGuarde - Ship / Do-not-ship verdict and certificate' },
+                    { src: 'assets/shipguarde5.png', alt: 'ShipGuarde - Run against any URL form' },
+                    { src: 'assets/shipguarde6.png', alt: 'ShipGuarde - Learnings from past runs' }
+                ]
+            },
             nexdocs: {
                 title: 'Nexdocs - AI-Powered Knowledge Platform',
                 type: 'web', // Web application screenshots

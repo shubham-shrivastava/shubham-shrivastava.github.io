@@ -229,6 +229,11 @@ strong {
   text-decoration: underline;
 }
 
+.project h3 .role-tag {
+  font-weight: 500;
+  color: #555;
+}
+
 .project p {
   margin-bottom: 0.35rem;
   line-height: 1.38;
