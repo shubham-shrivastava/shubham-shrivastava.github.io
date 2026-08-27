@@ -93,30 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle contact form submission
-    const contactForm = document.getElementById('contactForm');
-    const formResponse = document.getElementById('formResponse');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Don't prevent default - let the form submit to Formspree
-
-            // Show loading state
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            // The form will be submitted to Formspree
-            // We'll add the UI feedback after submission
-
-            // Clear success message after submission (Formspree will handle the redirect)
-            setTimeout(() => {
-                submitBtn.textContent = originalBtnText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-    }
+    // The contact form is handled by openMailClient() via the form's onsubmit.
+    // A leftover Formspree listener used to live here: it fired on every submit,
+    // overwrote the button with textContent (dropping its icon) and disabled it
+    // for two seconds even when validation had already rejected the input.
 
     // Set copyright year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -160,8 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: isMobile ? 0.01 : 0.15,
-            rootMargin: isMobile ? '0px 0px 0px 0px' : '0px 0px -10% 0px'
+            threshold: 0.01,
+            rootMargin: isMobile ? '0px 0px 0px 0px' : '0px 0px -5% 0px'
         });
 
         const isInView = (element) => {
@@ -191,6 +171,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    // Safety net. Reveal-on-scroll hides content until an observer fires, so a
+    // missed callback means a section is simply invisible to a visitor. These
+    // two backstops make the animation additive: worst case it does not play,
+    // never that the content disappears.
+    if (!prefersReducedMotion) {
+        const revealAll = () => {
+            revealItems.forEach(item => item.classList.add('is-visible'));
+            staggerContainers.forEach(c => c.classList.add('is-visible'));
+        };
+
+        const sweep = () => {
+            const h = window.innerHeight;
+            [...revealItems, ...staggerContainers].forEach(el => {
+                if (el.classList.contains('is-visible')) return;
+                const rect = el.getBoundingClientRect();
+                if (rect.top < h && rect.bottom > 0) el.classList.add('is-visible');
+            });
+        };
+
+        let ticking = false;
+        const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => { sweep(); ticking = false; });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        sweep();
+
+        // Nothing stays hidden for longer than this, whatever went wrong.
+        setTimeout(revealAll, 3000);
+    }
+
     // Add scroll listener to ensure visibility on mobile
     if (window.innerWidth <= 768) {
         const checkVisibility = () => {
@@ -226,52 +239,98 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to open email client with form data
 function openMailClient() {
-    // Get form values
+    const form = document.getElementById('contactForm');
+    const name = (document.getElementById('name')?.value || '').trim();
+    const from = (document.getElementById('from')?.value || '').trim();
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
+    const formResponse = document.getElementById('formResponse');
+    const TO = 'shrivastava.shubham219@live.com';
 
-    // Your email address
-    const yourEmail = "shrivastava.shubham219@live.com";
+    const fail = (field, msg) => {
+        formResponse.textContent = msg;
+        formResponse.className = 'form-response error';
+        field?.focus();
+        field?.classList.add('invalid');
+        return false;
+    };
 
-    // Create email body with just the message (name removed)
-    const emailBody = message;
+    form.querySelectorAll('.invalid').forEach((f) => f.classList.remove('invalid'));
 
-    // Encode for URL
-    const encodedSubject = encodeURIComponent(subject);
-    const encodedBody = encodeURIComponent(emailBody);
+    if (!subject) return fail(document.getElementById('subject'), 'A subject helps me answer the right thing.');
+    if (!message) return fail(document.getElementById('message'), 'The message is empty.');
+    if (from && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(from)) {
+        return fail(document.getElementById('from'), 'That email address does not look right.');
+    }
 
-    // Create mailto link
-    const mailtoLink = `mailto:${yourEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+    // Signature block only when the sender actually gave details, so the mail
+    // does not open with empty labels in it.
+    const signature = [name && `From: ${name}`, from && `Reply to: ${from}`].filter(Boolean).join('\n');
+    const body = signature ? `${message}\n\n--\n${signature}` : message;
+    const mailto = `mailto:${TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Show sending feedback
-    const submitBtn = document.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.textContent;
-    submitBtn.textContent = 'Opening Email Client...';
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalHTML = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Opening your mail app...';
     submitBtn.disabled = true;
 
-    // Open email client in a new tab
-    window.open(mailtoLink, '_blank');
+    window.location.href = mailto;
 
-    // Reset button after a short delay
     setTimeout(() => {
-        submitBtn.textContent = originalBtnText;
+        submitBtn.innerHTML = originalHTML;
         submitBtn.disabled = false;
-
-        // Show success message
-        const formResponse = document.getElementById('formResponse');
-        formResponse.textContent = 'Email client opened. If nothing happened, please check your browser settings.';
+        formResponse.innerHTML =
+            'Your mail app should be open. If nothing happened, ' +
+            '<button type="button" class="copy-btn inline" data-copy="' + TO + '">copy my address</button> instead.';
         formResponse.className = 'form-response success';
+        bindCopyButtons();
+    }, 900);
 
-        // Clear success message after some time
-        setTimeout(() => {
-            formResponse.textContent = '';
-            formResponse.className = 'form-response';
-        }, 5000);
-    }, 1000);
-
-        // Prevent form from actually submitting
     return false;
 }
+
+/* Copy-to-clipboard, used by the contact details and the fallback message. */
+function bindCopyButtons() {
+    document.querySelectorAll('.copy-btn:not([data-bound])').forEach((btn) => {
+        btn.setAttribute('data-bound', '1');
+        btn.addEventListener('click', async () => {
+            const value = btn.getAttribute('data-copy');
+            const original = btn.textContent;
+            try {
+                await navigator.clipboard.writeText(value);
+                btn.textContent = 'copied';
+                btn.classList.add('copied');
+            } catch {
+                btn.textContent = 'press ctrl+c';
+            }
+            setTimeout(() => {
+                btn.textContent = original;
+                btn.classList.remove('copied');
+            }, 1600);
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    bindCopyButtons();
+
+    const message = document.getElementById('message');
+    const count = document.getElementById('charCount');
+    if (message && count) {
+        const update = () => {
+            const n = message.value.length;
+            count.textContent = n === 1 ? '1 character' : n + ' characters';
+        };
+        message.addEventListener('input', update);
+        update();
+    }
+
+    // Clear the error state as soon as someone starts fixing it.
+    document.querySelectorAll('#contactForm input, #contactForm textarea').forEach((field) => {
+        field.addEventListener('input', () => field.classList.remove('invalid'));
+    });
+});
+
 
 // Lightbox Gallery functionality
 class LightboxGallery {
