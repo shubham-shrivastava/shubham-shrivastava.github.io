@@ -5,16 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Senior full-stack engineer with 9+ years building multi-tenant SaaS, backend systems, data pipelines, and AI-powered products.">
+    content="Founder and senior full-stack engineer with 9+ years shipping developer-facing products across TypeScript, Next.js, React, Node.js, Python, and PostgreSQL.">
   <meta name="keywords"
-    content="Senior Full-Stack Engineer, TypeScript, JavaScript, Node.js, React, Angular, Next.js, Python, FastAPI, PostgreSQL, MongoDB, Redis, GraphQL, REST APIs, Microservices, Data Pipelines, RAG, LLM, AWS, Docker, System Design">
-  <title>Shubham Shrivastav - Senior Full-Stack Engineer</title>
+    content="Founder, Senior Full-Stack Engineer, TypeScript, Next.js, React, Node.js, Python, PostgreSQL, GraphQL, Developer Tools, Multi-tenant SaaS, AI, Playwright, CI/CD, Remote">
+  <title>Shubham Shrivastav - Founder &amp; Senior Full-Stack Engineer</title>
   <link rel="stylesheet" href="resume.css">
   <style>
     body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
-    @media print { 
+    .contact-link { white-space: nowrap; }
+    @media print {
       body { text-rendering: optimizeSpeed; }
-      .page-break { page-break-before: always; }
+      /* Let Projects flow on from Experience instead of starting a third page. */
+      .projects-section { break-before: auto; page-break-before: auto; }
     }
   </style>
 </head>
@@ -24,13 +26,13 @@
 
     <header class="header">
       <h1 itemprop="name">Shubham Shrivastav</h1>
-      <p class="title">Senior Full-Stack Engineer | Backend, Data &amp; AI Systems</p>
+      <p class="title">Founder &amp; Senior Full-Stack Engineer | TypeScript, Next.js &amp; Node.js</p>
       <div class="contact">
         <a href="mailto:shrivastava.shubham219@live.com" itemprop="email">shrivastava.shubham219@live.com</a>
         <span class="sep">|</span>
         <a href="tel:+918236028730" itemprop="telephone">+91 82360 28730</a>
         <span class="sep">|</span>
-        <span itemprop="address">Lalitpur, India</span>
+        <span itemprop="address">Pune, India (Remote since 2018)</span>
         <br>
         <span class="contact-link">LinkedIn: <a href="https://linkedin.com/in/shubhamshrivastav" itemprop="sameAs">linkedin.com/in/shubhamshrivastav</a></span>
         <span class="sep">|</span>
@@ -41,8 +43,8 @@
     </header>
 
     <section class="section">
-      <h2 class="section-title">Professional Summary</h2>
-      <p class="summary-text">Senior full-stack engineer with <strong>9+ years</strong> building multi-tenant SaaS, distributed systems, data pipelines, and AI products end to end. At Luzmo, reduced GPT-4 workflow latency <strong>40%</strong>, cut monorepo build time <strong>60%</strong>, and raised test coverage from <strong>65% to 92%</strong>. Strong in TypeScript, Node.js, React, Angular, Python, PostgreSQL, and REST/GraphQL APIs. <strong>Founder of <a href="https://shipguarde.com">ShipGuarde</a></strong>, a multi-agent release-quality platform. Remote since 2018; fluent in English; mentors engineers and owns ambiguous projects end to end.</p>
+      <h2 class="section-title">Summary</h2>
+      <p class="summary-text">Senior full-stack engineer with <strong>9+ years</strong> building developer-facing products end to end, across TypeScript, Next.js, React, Node.js, Python, and PostgreSQL. Eight years at Luzmo, a Belgian company, on a multi-tenant analytics platform that thousands of customers build against. Founder of <a href="https://shipguarde.com">ShipGuarde</a>, taken from an empty repository to a live SaaS with paid plans, a public API, and a distributed GitHub Action. Comfortable owning a problem from an ambiguous idea through production and the iteration after it. Remote since 2018, working European hours the whole time.</p>
     </section>
 
     <section class="section skills-section">
@@ -52,40 +54,64 @@
           <strong>Languages:</strong> TypeScript, JavaScript, Python, SQL
         </div>
         <div class="skills-row">
-          <strong>Frontend:</strong> React, Angular, Next.js, NgRx, Redux, RxJS, Tailwind CSS, Responsive UI, Accessibility
+          <strong>Frontend:</strong> React, Next.js (App Router, React Server Components, SSR, streaming), TanStack Query, Redux, Radix, Tailwind CSS, design systems and component libraries, accessibility, Angular, NgRx, RxJS
         </div>
         <div class="skills-row">
-          <strong>Backend &amp; APIs:</strong> Node.js, Express, NestJS, FastAPI, REST APIs, GraphQL, tRPC, WebSockets, Microservices
+          <strong>Backend &amp; APIs:</strong> Node.js, Fastify, NestJS, Express, Python, FastAPI, REST, GraphQL, tRPC, Zod contracts, WebSockets, SSE, microservices, queues and background workers
         </div>
         <div class="skills-row">
-          <strong>Data &amp; AI:</strong> PostgreSQL, MongoDB, Redis, BigQuery, Snowflake, pgvector, RAG, LangChain, LangSmith, OpenAI GPT-4/4o, LLM Evaluation
+          <strong>Data &amp; infrastructure:</strong> PostgreSQL, Prisma, pgvector, MongoDB, Redis, BullMQ, ingestion pipelines and connectors (BigQuery, Snowflake), Docker, AWS, Railway, multi-tenant isolation, billing and entitlements
         </div>
         <div class="skills-row">
-          <strong>Cloud &amp; Quality:</strong> AWS, Docker, CI/CD, GitHub Actions, Jest, Cypress, Playwright, NX Monorepo, Observability
+          <strong>AI in production:</strong> LLM features (GPT-4/4o), multi-agent orchestration, RAG with pgvector, evaluation harnesses, LLM tracing and observability, cost ceilings
+        </div>
+        <div class="skills-row">
+          <strong>Quality &amp; delivery:</strong> Playwright, Jest, Vitest, Cypress, pytest, E2E and visual regression, CI/CD, GitHub Actions, Turborepo, NX, observability and tracing
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">Professional Experience</h2>
+      <h2 class="section-title">Experience</h2>
+
+      <article class="job">
+        <div class="job-header">
+          <div>
+            <h3>Founder &amp; Principal Engineer</h3>
+            <p class="company"><a href="https://shipguarde.com">ShipGuarde</a>, release-quality platform for developers</p>
+          </div>
+          <div class="job-meta">
+            <span class="date">2026 - Present</span>
+            <span class="location">Pune, India</span>
+          </div>
+        </div>
+        <p class="tech-stack">Next.js 15, TypeScript, React, Fastify, BullMQ, Redis, PostgreSQL/Prisma, Zod, WebSockets, Playwright, Python, Docker, Turborepo</p>
+        <ul>
+          <li>Built the product solo end to end: architecture, dashboard, API, infrastructure, billing, docs, pricing, and the customer conversations. Empty repository to a live multi-tenant SaaS with organizations, paid plans, a public API, and a GitHub Action other people install.</li>
+          <li>Architected the runtime as isolated parallel workers behind a Fastify orchestrator, with per-agent timeouts, shared Zod contracts across every service boundary, and a retry policy that retries only infrastructure faults, so one agent failing never fails a run.</li>
+          <li>Built the billing and entitlements stack behind a provider-agnostic payment seam: signature-verified webhooks deduped by event id and applied idempotently, multi-currency plans, and usage meters computed from the source of truth so they cannot drift.</li>
+          <li>Designed a <strong>23-component</strong> shared UI package consumed by every surface in the monorepo, so a verdict, a status, or a metric renders identically in the dashboard, the pull-request comment, and the public report.</li>
+          <li>Built a precision/recall/F1 evaluation harness over fixture cases that regression-guards agent quality as models and prompts change.</li>
+        </ul>
+      </article>
 
       <article class="job">
         <div class="job-header">
           <div>
             <h3>Full Stack Developer</h3>
-            <p class="company">Luzmo (Formerly Cumul.io)</p>
+            <p class="company">Luzmo (formerly Cumul.io), embedded analytics platform</p>
           </div>
           <div class="job-meta">
             <span class="date">June 2019 - Present</span>
             <span class="location">Remote</span>
           </div>
         </div>
-        <p class="tech-stack">TypeScript, Angular, React, Node.js, Python, REST/GraphQL APIs, PostgreSQL, MongoDB, Redis, OpenAI GPT-4, LangChain, NX, Docker, AWS</p>
+        <p class="tech-stack">React, Angular, TypeScript, Node.js, Python, REST/GraphQL, PostgreSQL, Redis, NX, Jest, Cypress, Playwright, Docker, AWS, CI/CD</p>
         <ul>
-          <li>Owned analytics features across Angular/React frontends, Node.js/Python services, REST/GraphQL APIs, and data pipelines; partnered with Product and Design and mentored <strong>5+ engineers</strong>.</li>
-          <li>Architected a GPT-4 analytics assistant that turns questions into interactive charts; cut latency <strong>40%</strong> with tiktoken, Redis, query optimization, and LangChain observability while protecting tenant data.</li>
-          <li>Led system design for an NX micro-frontend migration, cutting build time <strong>60%</strong> and improving developer velocity for a platform serving thousands of embedded analytics requests daily.</li>
-          <li>Raised automated test coverage from <strong>65% to 92%</strong> with Jest, Cypress, and Playwright; strengthened CI/CD and reduced production regressions.</li>
+          <li>Own developer-facing analytics and AI features end to end for a multi-tenant platform serving thousands of embedded-analytics requests daily: React and Angular interfaces, typed REST and GraphQL contracts that customers build against, Node.js and Python services, and the tenant-isolated data layer beneath them.</li>
+          <li>Shipped a production GPT-4 assistant that turns natural-language questions into interactive charts, then cut latency <strong>40%</strong> by reading production traces and fixing what they pointed at: tokenization, Redis caching, and query optimization.</li>
+          <li>Led the system design for an NX micro-frontend migration that cut build time <strong>60%</strong> and made a large codebase safely divisible across teams.</li>
+          <li>Raised automated coverage from <strong>65% to 92%</strong> with layered Jest, Cypress, and Playwright suites in CI/CD. Partner with Product and Design on scope and API shape, and mentor <strong>5+ engineers</strong>.</li>
         </ul>
       </article>
 
@@ -93,7 +119,7 @@
         <div class="job-header">
           <div>
             <h3>Backend Developer</h3>
-            <p class="company">Luzmo (Formerly Cumul.io)</p>
+            <p class="company">Luzmo (formerly Cumul.io)</p>
           </div>
           <div class="job-meta">
             <span class="date">January 2018 - June 2019</span>
@@ -102,8 +128,8 @@
         </div>
         <p class="tech-stack">Node.js, Express, TypeScript, REST APIs, Microservices, MongoDB, PostgreSQL, Docker, GitHub Actions, AWS Lambda</p>
         <ul>
-          <li>Built scalable REST APIs and Node.js microservices processing thousands of requests daily with <strong>99.9% uptime</strong>, supporting rapid product growth and feature delivery.</li>
-          <li>Engineered data pipelines and connectors for <strong>5+ external platforms</strong>, including BigQuery, Snowflake, and PostgreSQL, enabling real-time analytics for thousands of customers.</li>
+          <li>Built the REST APIs and Node.js microservices behind the platform, handling thousands of requests daily at <strong>99.9% uptime</strong> across MongoDB, PostgreSQL, Docker, and AWS.</li>
+          <li>Engineered ingestion pipelines and connectors for <strong>5+ external data platforms</strong> including BigQuery, Snowflake, and PostgreSQL, each with its own auth model, rate limits, and failure modes.</li>
         </ul>
       </article>
 
@@ -118,48 +144,47 @@
             <span class="location">Nagpur, India</span>
           </div>
         </div>
-        <p class="tech-stack">Python, Django, OCR, Tesseract, Java, Windows/.NET</p>
+        <p class="tech-stack">Python, Django, OCR/Tesseract, Java, Windows/.NET</p>
         <ul>
-          <li>Delivered secure applications for government clients and helped design an OCR translation pipeline using Tesseract that eliminated data errors across thousands of documents each month.</li>
-          <li>Built a cross-platform deployment tool that reduced enterprise installation time from days to minutes and saved <strong>120+ IT staff hours</strong> per deployment cycle.</li>
+          <li>Delivered security-reviewed applications for government clients and designed an OCR translation pipeline on Tesseract that eliminated manual data errors across thousands of documents monthly.</li>
+          <li>Built a cross-platform deployment tool that took enterprise installation from days to minutes, saving <strong>120+ IT staff hours</strong> per deployment cycle.</li>
         </ul>
       </article>
     </section>
 
     <section class="section projects-section">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">Selected Projects</h2>
 
-      <article class="project">
-        <h3><a href="https://shipguarde.com" target="_blank" rel="noopener noreferrer">ShipGuarde</a>: AI Quality Gate for Every Release <span class="role-tag">(Founder)</span></h3>
-        <p class="tech-stack">Node.js, Fastify, TypeScript, BullMQ, Redis, PostgreSQL (Prisma), Zod, WebSockets, Python, Playwright, Docker, Next.js</p>
+      <article class="project featured-project">
+        <h3><a href="https://github.com/shubham-shrivastava/ocularis" target="_blank" rel="noopener noreferrer">Ocularis</a>, Autonomous Browsing Agent <span class="role-tag">(Creator, Apache-2.0 open source)</span></h3>
+        <p class="tech-stack">Next.js 14, TypeScript, Python, FastAPI, Playwright, Pydantic, PostgreSQL, pgvector, Docker, pytest</p>
         <ul>
-          <li>Founded and architected a multi-agent release-quality platform for visual QA, accessibility, performance, security, and linting across live URLs and pull requests; converts parallel findings into one plain-English Ship / Do-not-ship verdict.</li>
-          <li>Built distributed, event-driven Fastify/BullMQ orchestration with isolated workers, timeouts, retries, WebSocket progress, typed Zod contracts, and multi-tenant PostgreSQL; added precision/recall/F1 evaluations to prevent agent-quality regressions.</li>
+          <li>Open-source agent that turns a high-level goal into supervised browser actions and structured answers. Designed the public API, the live dashboard, the docs, the Docker setup, and a contribution-ready test suite, treating the developer picking it up as the real user.</li>
+          <li>Engineered per-run isolation, typed API models, critic and goal-evaluation loops, MD5/SSIM stuck detection, recovery strategies, circuit breakers, and human approval gates, so failure is observable and reproducible instead of silently retried.</li>
         </ul>
       </article>
 
       <article class="project">
-        <h3><a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a> - AI Knowledge Platform (RAG &amp; Vector Search)</h3>
-        <p class="tech-stack">Next.js, TypeScript, tRPC, NestJS, Python, FastAPI, PostgreSQL (pgvector), LangChain, OpenAI GPT-4o, Redis, Docker</p>
+        <h3><a href="https://nexdocs.in" target="_blank" rel="noopener noreferrer">NexDocs</a>, AI Knowledge Platform <span class="role-tag">(0-to-1, solo)</span></h3>
+        <p class="tech-stack">Next.js App Router, TypeScript, tRPC, NestJS, FastAPI, PostgreSQL/pgvector, Redis, SSE, Docker</p>
         <ul>
-          <li>Architected a Next.js/NestJS/FastAPI microservices platform with tRPC type safety across <strong>40+ API endpoints</strong> and document ingestion for PDF, DOCX, Markdown, and URLs.</li>
-          <li>Built a pgvector RAG pipeline with smart chunking, semantic retrieval, SSE/Redis progress streaming, and five parallel generation workers, reducing content generation time <strong>70%</strong>; added circuit breakers, retries, caching, and LangSmith tracing.</li>
+          <li>Full SaaS product with end-to-end type safety across <strong>40+ tRPC endpoints</strong>, document ingestion, semantic search on pgvector, custom-domain publishing, and an embeddable widget: three distribution modes over one core.</li>
+          <li>Built SSE and Redis progress streaming over five parallel generation workers that cut generation time <strong>70%</strong>, backed by circuit breakers, retries, caching, and production tracing.</li>
         </ul>
       </article>
 
       <article class="project">
-        <h3><a href="https://railway-control-center-frontend.up.railway.app/" target="_blank" rel="noopener noreferrer">Railway Control Center</a> - Service Scheduler <span class="role-tag">(Full-Stack, React + Next.js)</span></h3>
-        <p class="tech-stack">Next.js 14, TypeScript, TanStack Query, Tailwind, shadcn/ui, NestJS, Prisma, PostgreSQL, GraphQL</p>
+        <h3><a href="https://railway-control-center-frontend.up.railway.app/" target="_blank" rel="noopener noreferrer">Railway Control Center</a>, Service Scheduler <span class="role-tag">(Full-stack, solo)</span></h3>
+        <p class="tech-stack">Next.js 14, TypeScript, TanStack Query, NestJS, GraphQL, Prisma, PostgreSQL, Docker</p>
         <ul>
-          <li>Built a full-stack scheduler on Railway's GraphQL API with secure token storage, cron-based jobs, real-time status polling, one-click actions, and a unified health dashboard; deployed with Docker on Railway.</li>
+          <li>Built the scheduling and health features Railway's dashboard does not offer, on top of their public GraphQL API: cron-based spin-up and spin-down, one-time delayed actions, one-click redeploy and restart, and a unified health view. Every GraphQL operation typed against the schema so a change surfaces at compile time.</li>
         </ul>
       </article>
 
       <article class="project">
-        <h3><a href="https://github.com/shubham-shrivastava/ocularis" target="_blank" rel="noopener noreferrer">Ocularis</a> - Autonomous Agent (Open Source)</h3>
-        <p class="tech-stack">Python, FastAPI, Playwright, PostgreSQL, pgvector, Next.js, Docker</p>
+        <h3><a href="https://apps.apple.com/in/app/timedial/id6758935499?mt=12" target="_blank" rel="noopener noreferrer">TimeDial</a>, macOS Menu Bar App <span class="role-tag">(Shipped to the App Store)</span></h3>
         <ul>
-          <li>Built a vision-based browsing agent with goal planning, critic loops, outcome evaluation, MD5/SSIM stuck detection, multi-step recovery, and circuit-breaker escalation to human intervention.</li>
+          <li>A timezone comparison app for distributed teams, built in SwiftUI and AppKit and shipped through App Store review, because working across timezones since 2018 made the problem mine.</li>
         </ul>
       </article>
     </section>
