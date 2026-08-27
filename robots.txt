@@ -1,0 +1,5 @@
+# https://shubhamshrivastav.com
+User-agent: *
+Allow: /
+
+Sitemap: https://shubhamshrivastav.com/sitemap.xml
