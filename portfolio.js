@@ -500,18 +500,11 @@ class LightboxGallery {
             }
         });
 
-        // Prevent body scroll when lightbox is open
-        this.lightbox.addEventListener('transitionstart', () => {
-            if (this.lightbox.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-        this.lightbox.addEventListener('transitionend', () => {
-            if (!this.lightbox.classList.contains('active')) {
-                document.body.style.overflow = '';
-            }
-        });
+        // Body scroll is locked directly in openGallery/closeLightbox. It used to
+        // hang off transitionstart/transitionend, but the overlay toggles
+        // `display`, which cannot transition: transitionstart still fired from a
+        // child's transition bubbling up, transitionend never fired on close, and
+        // the page was left permanently unscrollable.
     }
 
         openGallery(galleryName, startIndex = 0) {
@@ -537,10 +530,14 @@ class LightboxGallery {
         this.createDots();
         this.updateImage();
         this.lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
     closeLightbox() {
         this.lightbox.classList.remove('active');
+        // Only release the scroll lock if the terminal is not also holding it.
+        document.body.style.overflow =
+            document.getElementById('terminal')?.classList.contains('active') ? 'hidden' : '';
         this.currentGallery = null;
         this.currentIndex = 0;
     }
@@ -560,9 +557,12 @@ class LightboxGallery {
 
         // Hide/show navigation buttons for single images
         const showNavigation = this.currentGallery.images.length > 1;
-        this.lightboxPrev.style.display = showNavigation ? 'flex' : 'none';
-        this.lightboxNext.style.display = showNavigation ? 'flex' : 'none';
-        this.lightboxDots.style.display = showNavigation ? 'flex' : 'none';
+        // Toggle visibility without hard-coding a display value: an inline
+        // `display: flex` beat the stylesheet's `display: grid` and left the
+        // chevrons stuck against the left edge of their button instead of centred.
+        for (const el of [this.lightboxPrev, this.lightboxNext, this.lightboxDots]) {
+            el.style.display = showNavigation ? '' : 'none';
+        }
     }
 
     nextImage() {

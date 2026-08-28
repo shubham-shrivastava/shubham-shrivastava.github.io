@@ -306,7 +306,9 @@
 
   function close() {
     el.root.classList.remove('active');
-    document.body.style.overflow = '';
+    // Only release the scroll lock if the lightbox is not also holding it.
+    document.body.style.overflow =
+      document.getElementById('lightbox')?.classList.contains('active') ? 'hidden' : '';
   }
 
   async function greet() {
